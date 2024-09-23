@@ -1,7 +1,7 @@
-import  { useState } from 'react';
+import { useState } from 'react';
 import './Navbar.css';
-import { FaBars, FaTimes } from 'react-icons/fa';
-import logo from "../assets/lsg-logo.jpg" // Import icons for hamburger menu
+import { FaBars, FaTimes } from 'react-icons/fa'; // Import icons for hamburger menu
+import logo from "../assets/lsg-logo.jpg"; // Logo image import
 
 const Navbar = () => {
   const [click, setClick] = useState(false);
@@ -14,8 +14,12 @@ const Navbar = () => {
       <div className="navbar-container">
         {/* Logo with Homepage Link */}
         <a href="/" className="navbar-logo">
-          <img src={logo}className="logo" /> 
-          MyWebsite
+          <img src={logo} alt="LSG Logo" className="logo" />
+          <div className="lil">
+            LSG <br />
+            INVESTMENT <br />
+            LIMITED
+          </div>
         </a>
 
         {/* Hamburger Icon for Mobile */}
@@ -36,7 +40,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#faq" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/faq" className="nav-links" onClick={closeMobileMenu}>
               FAQ
             </a>
           </li>
@@ -61,7 +65,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#register" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/registration" className="nav-links" onClick={closeMobileMenu}>
               Registration
             </a>
           </li>
