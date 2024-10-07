@@ -1,63 +1,100 @@
-/* Hero Container */
 .hero-container {
-    width: 100%;
-    height: 70vh;
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Hero Image Slider */
-  .hero-image {
-    width: 100%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-    transition: background-image 1.5s ease-in-out; /* Smooth transition between images */
-  }
-  
-  /* Glassmorphism effect for hero content */
-  .hero-content {
-    position: absolute;
-    top: 15%;
-    left: 20%;
-    background: rgba(255, 255, 255, 0.4); /* Translucent background */
-    backdrop-filter: blur(10px); /* Glass effect */
-    border-radius: 15px;
-    padding: 20px;
-    width: 60vw;
-    height: 50vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37); /* Soft shadow */
-    border: 1px solid rgba(255, 255, 255, 0.18); /* Border to enhance the glass effect */
-  }
-  
-  /* Hero Title and Subtitle */
-  .hero-content h1 {
-    font-size: 3rem;
-    color: #333;
-    margin: 0;
-    font-weight: bold;
-  }
-  
-  .hero-content p {
-    font-size: 1.5rem;
-    color: #333;
-    margin-top: 10px;
-    font-weight: 300;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    .hero-content h1 {
-      font-size: 2rem;
-    }
-  
-    .hero-content p {
-      font-size: 1rem;
-    }
-  }
-  
+  width: 100%;
+  position: relative;
+}
+
+.hero-image {
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-content {
+  text-align: center;
+  color: white;
+  max-width: 800px;
+  padding: 20px;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero-content p {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.cta-btn {
+  background-color: #002d24; /* Dark green as per the image */
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.cta-btn:hover {
+  background-color: #004d3c; /* Slightly lighter green for hover */
+}
+
+.quick-service-request {
+  background-color: white;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: -40px; /* Adjust margin to overlap the hero section slightly */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.quick-service-request h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+
+.inspection-request-form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.input-field {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.send-btn {
+  background-color: #002d24;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.send-btn:hover {
+  background-color: #004d3c;
+}
+/* CSS to style the map container */
+.map-container {
+  width: 100%;
+  height: 400px; /* Adjust the height as needed */
+  margin-top: 20px;
+  position: relative;
+}
+
+/* The actual map styling */
+#map {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 1px solid #ddd; /* Optional border for better visibility */
+}

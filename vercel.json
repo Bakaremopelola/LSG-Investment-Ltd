@@ -1,0 +1,30 @@
+{
+    "version": 2,
+    "builds": [
+      {
+        "src": "src/index.js", // Change this to your entry file
+        "use": "@vercel/node"  // Use this if you're deploying a Node.js function
+      },
+      {
+        "src": "package.json",
+        "use": "@vercel/static-build" // Use this if you're deploying a static site
+      }
+    ],
+    "routes": [
+      {
+        "src": "/api/(.*)",
+        "dest": "/api/$1"
+      },
+      {
+        "src": "/(.*)",
+        "dest": "/index.html" // Change this if your entry point is different
+      }
+    ],
+    "functions": {
+      "api/*.js": {
+        "memory": 1024,
+        "maxDuration": 10 // Duration in seconds
+      }
+    }
+  }
+  
