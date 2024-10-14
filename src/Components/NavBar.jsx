@@ -35,7 +35,7 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/about" className="nav-links" onClick={closeMobileMenu}>
               About Us
             </a>
           </li>
@@ -45,22 +45,22 @@ const Navbar = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a href="#services" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/services" className="nav-links" onClick={closeMobileMenu}>
               Services
             </a>
           </li>
           <li className="nav-item">
-            <a href="#gallery" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/gallery" className="nav-links" onClick={closeMobileMenu}>
               Gallery
             </a>
           </li>
           <li className="nav-item">
-            <a href="#contact" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/contact" className="nav-links" onClick={closeMobileMenu}>
               Contact Us
             </a>
           </li>
           <li className="nav-item">
-            <a href="#testimonials" className="nav-links" onClick={closeMobileMenu}>
+            <a href="/testimonials" className="nav-links" onClick={closeMobileMenu}>
               Testimonials
             </a>
           </li>

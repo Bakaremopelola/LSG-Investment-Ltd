@@ -1,0 +1,200 @@
+/* Home Page Styling */
+.home-page-container {
+  overflow-x: hidden;
+  width: 100vw;
+  margin: 0;
+}
+
+/* Glass card styling */
+.glass-card {
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  margin-bottom:auto;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Services Section */
+.services {
+  text-align: center;
+  width: 90vw;
+  margin: auto;
+  padding: 40px 0;
+}
+
+.services, .faq-preview,.team-preview, .glass-card h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  display: grid;
+  place-items: center;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.service-item {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  flex-basis: 22%;
+  text-align: center;
+}
+
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+}
+
+.service-item img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.service-item h3 {
+  margin-top: 15px;
+  font-size: 1.2rem;
+  color: #007bff;
+}
+
+.see-more-btn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  margin-top: 30px;
+  font-size: 1.1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.see-more-btn:hover {
+  background-color: #0056b3;
+}
+
+/* Map Section */
+.map-container {
+  margin-top: 30px;
+}
+
+/* Team Section */
+.team-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+.team-title {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 50px;
+  color: #333;
+}
+
+.team-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.team-card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+  transform: scale(1.05);
+}
+.team-preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.team-img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 20px;
+}
+
+.team-name {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+}
+
+.team-role {
+  color: #888;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.team-bio {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.team-social {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.team-social a {
+  color: #555;
+  font-size: 20px;
+  transition: color 0.3s ease;
+}
+
+.team-social a:hover {
+  color: #0077b5; /* LinkedIn blue */
+}
+.faq-preview{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  margin: auto;
+}
+
+/* Responsive design for services and team sections */
+@media (max-width: 768px) {
+  /* Services List responsive */
+  .services-list {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .service-item {
+    flex-basis: 100%;
+  }
+
+  /* Team Container responsive */
+  .team-container {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+}
