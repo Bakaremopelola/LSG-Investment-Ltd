@@ -1,5 +1,5 @@
 import './PropertyListing.css'; // Add this CSS file for styling
-import lsg1 from '../assets/lsg1.jpg'; // Replace with real image paths
+// import lsg1 from '../assets/lsg1.jpg'; // Replace with real image paths
 import lsg8 from '../assets/lsg8.jpg';
 import maitama4 from '../assets/maitama4.jpg'; 
 import maitama5 from '../assets/maitama5.jpg'; // Replace with real image paths
