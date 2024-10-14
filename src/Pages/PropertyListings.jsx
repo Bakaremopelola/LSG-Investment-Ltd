@@ -31,7 +31,7 @@ const properties = [
     price: "₦7.5M",
     SQM: "1Acre",
     Extra: "Survey plan and Deed of ownership",
-    images: [Lsg8], 
+    images: [lsg8], 
   },
   {
     id: 4,
@@ -41,7 +41,7 @@ const properties = [
     SQM: "1Acre",
     InitialDeposit: "₦3M",
     Extra: "Survey plan and Deed of ownership",
-    images: [Lsg8], 
+    images: [lsg8], 
   },
   {
     id: 5,
