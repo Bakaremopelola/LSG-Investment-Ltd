@@ -44,7 +44,7 @@ const AboutUs = () => {
           <div className="mission-content">
             <h2>Our Mission</h2>
             <p>
-              "At LSG INVESTMENT LIMITED, we are dedicated to transforming the real estate experience by prioritizing Location, delivering exceptional Service, and fostering sustainable Growth. Our mission is to provide innovative solutions, insightful market expertise, and unmatched service at every stage of the property journey. We strive to help our clients find the ideal locations that maximize value, while ensuring long-term success for both individual investments and the communities we serve. By building lasting relationships and delivering excellence in every transaction, we aim to revolutionize the way people experience real estate."
+              At LSG INVESTMENT LIMITED, we are dedicated to transforming the real estate experience by prioritizing Location, delivering exceptional Service, and fostering sustainable Growth. Our mission is to provide innovative solutions, insightful market expertise, and unmatched service at every stage of the property journey. We strive to help our clients find the ideal locations that maximize value, while ensuring long-term success for both individual investments and the communities we serve. By building lasting relationships and delivering excellence in every transaction, we aim to revolutionize the way people experience real estate.
             </p>
           </div>
         </div>

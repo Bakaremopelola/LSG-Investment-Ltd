@@ -1,18 +1,21 @@
+/* FAQ Container */
 .faq-grid-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  width: 100%;
 }
 
+/* FAQ Card */
 .faq-card {
   background-color: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 20px;
   cursor: pointer;
-  width: 80vw;
-  margin: auto;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -21,6 +24,7 @@
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
+/* FAQ Question */
 .faq-question {
   font-size: 1.2rem;
   margin-bottom: 10px;
@@ -28,12 +32,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
 .faq-answer {
   font-size: 1rem;
   color: #555;
-  line-height: 1.5;
+  line-height: 1.6;
   margin-top: 10px;
   display: none;
 }
@@ -46,4 +52,35 @@
   font-size: 1.5rem;
   color: #007bff;
   font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.faq-card.active .faq-toggle-icon {
+  transform: rotate(180deg);
+}
+
+/* Responsive Styles */
+@media screen and (max-width: 768px) {
+  .faq-card {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .faq-question {
+    font-size: 1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .faq-question {
+    font-size: 0.9rem;
+  }
+
+  .faq-answer {
+    font-size: 0.8rem;
+  }
 }

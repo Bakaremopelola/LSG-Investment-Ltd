@@ -1,100 +1,129 @@
-import React, { useEffect } from "react";
+import  { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import Hero from "../Components/Hero";
 import PropertyListing from "./PropertyListings";
-import FAQSection from "../Pages/FAQ"; // Import the FAQ component
+import FAQSection from "../Pages/FAQ";
 import lsg1 from "../assets/Lsg1.jpg";
 import consult from "../assets/consult.png";
 import land4 from "../assets/land5.jpg";
 import build from "../assets/build.webp";
+import AOS from "aos";
+import "aos/dist/aos.css"; // Import AOS styles
 import "./HomePage.css";
 
 const HomePage = () => {
   const navigate = useNavigate();
 
-  // Define handleSeeMoreServices here
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const handleSeeMoreServices = () => {
-    navigate("/services"); // Navigate to the services page
+    navigate("/services");
   };
 
   const handleSeeMoreTeam = () => {
-    navigate("/about#team"); 
+    navigate("/about#team");
   };
 
   const handleSeeMoreFAQs = () => {
-    navigate("/faq"); // Navigate to the FAQ page
+    navigate("/faq");
   };
 
   return (
     <div className="home-page-container">
       <Hero />
-      <div className="glass-card">
-      <h2 className="titles">Property Listings</h2>
+
+      {/* Property Listings */}
+      <div className="glass-card" data-aos="fade-up">
+        <h2 className="titles">Property Listings</h2>
         <PropertyListing />
       </div>
 
-      {/* Services Section */}
-      <section className="services">
-        <h2>Our Services</h2>
-        <div className="services-list">
-          <div className="service-item">
-            <img src={land4} alt="Buying and Selling Properties" />
-            <h3>Buying and Selling Properties</h3>
-          </div>
-          <div className="service-item">
-            <img src={build} alt="Constructions and Renovations" />
-            <h3>Constructions and Renovations</h3>
-          </div>
-          <div className="service-item">
-            <img src={consult} alt="Consultations and Support" />
-            <h3>Consultations and Support</h3>
-          </div>
-          <div className="service-item">
-            <img src={lsg1} alt="Property Management" />
-            <h3>Property Management</h3>
-          </div>
+      <section className="services" data-aos="fade-right">
+  <h2>Our Services</h2>
+  <div className="services-grid">
+    {[
+      {
+        img: land4,
+        title: "Buying and Selling Properties",
+        description: "We help you buy and sell properties with ease and reliability.",
+      },
+      {
+        img: build,
+        title: "Constructions and Renovations",
+        description: "Transform spaces with our expert construction and renovation services.",
+      },
+      {
+        img: consult,
+        title: "Consultations and Support",
+        description: "Get professional advice and support tailored to your needs.",
+      },
+      {
+        img: lsg1,
+        title: "Property Management",
+        description: "Ensure seamless management of your properties with our services.",
+      },
+    ].map((service, index) => (
+      <div key={index} className="service-card" data-aos="zoom-in">
+        <img src={service.img} alt={service.title} className="service-icon" />
+        <div className="service-details">
+          <h3 className="service-title">{service.title}</h3>
+          <p className="service-description">{service.description}</p>
         </div>
-        <button className="see-more-btn" onClick={handleSeeMoreServices}>
-          See More Services
-        </button>
-      </section>
+      </div>
+    ))}
+  </div>
+  <button className="see-more-btn" onClick={handleSeeMoreServices}>
+    See More Services
+  </button>
+</section>
+
 
       {/* Meet Our Team Section */}
-      <section className="team-preview">
+      <section className="team-preview" data-aos="fade-left">
         <h2>Meet Our Team</h2>
         <div className="team-container">
-          <div className="team-card">
-            <img src="team-member1.jpg" alt= "Maikudi" className="team-img" />
-            <h3 className="team-name">Olaitan Ridwan Oluwakemi</h3>
-            <p className="team-role">CEO & Founder</p>
-          </div>
-          <div className="team-card">
-            <img src="team-member2.jpg" alt="Agemo Idowu" className="team-img" />
-            <h3 className="team-name">Agemo Idowu Bamidele</h3>
-            <p className="team-role">Head of Design</p>
-          </div>
-          <div className="team-card">
-            <img src="team-member3.jpg" alt="Williams" className="team-img" />
-            <h3 className="team-name">Alabor Ufoma Okugbe</h3>
-            <p className="team-role">Lead Developer</p>
-          </div>
+          {[
+            {
+              img: "team-member1.jpg",
+              name: "Olaitan Ridwan Oluwakemi",
+              role: "CEO & Founder",
+            },
+            {
+              img: "team-member2.jpg",
+              name: "Agemo Idowu Bamidele",
+              role: "Head of Design",
+            },
+            {
+              img: "team-member3.jpg",
+              name: "Alabor Ufoma Okugbe",
+              role: "Lead Developer",
+            },
+          ].map((member, index) => (
+            <div key={index} className="team-card" data-aos="zoom-in">
+              <img src={member.img} alt={member.name} className="team-img" />
+              <h3 className="team-name">{member.name}</h3>
+              <p className="team-role">{member.role}</p>
+            </div>
+          ))}
         </div>
         <button className="see-more-btn" onClick={handleSeeMoreTeam}>
-          See More teamMembers
+          See More Team Members
         </button>
       </section>
 
       {/* FAQ Section */}
-      <section className="faq-preview">
+      <section className="faq-preview" data-aos="fade-up">
         <h2>Frequently Asked Questions</h2>
-        <FAQSection limit={3} />  {/* Display only 3 FAQs on the homepage */}
+        <FAQSection limit={3} />
         <button className="see-more-btn" onClick={handleSeeMoreFAQs}>
           See More FAQs
         </button>
       </section>
 
       {/* Map Section */}
-      <div className="map-container glass-card">
+      <div className="map-container glass-card" data-aos="fade-up">
         <iframe
           width="100%"
           height="450"

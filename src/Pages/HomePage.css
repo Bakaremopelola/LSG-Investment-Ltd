@@ -1,200 +1,184 @@
-/* Home Page Styling */
+/* General */
 .home-page-container {
-  overflow-x: hidden;
-  width: 100vw;
-  margin: 0;
-}
-
-/* Glass card styling */
-.glass-card {
-  background: rgba(255, 255, 255, 0.7);
-  border-radius: 12px;
+  width: 100%;
+  max-width: 100vw; /* Limit the maximum width */
+  margin: 0 auto;
   padding: 20px;
-  text-align: center;
-  margin-bottom:auto;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  backdrop-filter: blur(10px);
+  overflow: hidden; /* Prevent horizontal scrolling */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
 }
 
-/* Services Section */
-.services {
+.titles,
+h2 {
+  font-size: 2rem;
   text-align: center;
-  width: 90vw;
-  margin: auto;
-  padding: 40px 0;
-}
-
-.services, .faq-preview,.team-preview, .glass-card h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: #333;
-  display: grid;
-  place-items: center;
 }
 
-.services-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 20px;
-}
-
-.service-item {
+.services {
+  padding: 40px 20px;
   background-color: #f9f9f9;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  flex-basis: 22%;
   text-align: center;
 }
 
-.service-item:hover {
-  transform: translateY(-10px);
+.services h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* This ensures flexible columns */
+  gap: 20px;
+  justify-items: center; /* Center grid items horizontally */
+  align-items: start; /* Align grid items at the start of each cell */
+  padding: 20px;
+  grid-auto-rows: 1fr; /* Ensure grid items grow evenly */
+}
+
+.service-card {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  max-width: 400px; /* Prevent overly wide cards */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
 }
 
-.service-item img {
-  width: 100%;
-  height: 200px;
+.service-icon {
+  width: 80px;
+  height: 80px;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 50%;
+  margin-right: 20px;
 }
 
-.service-item h3 {
-  margin-top: 15px;
-  font-size: 1.2rem;
+.service-details {
+  text-align: left;
+}
+
+.service-title {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
   color: #007bff;
 }
 
+.service-description {
+  font-size: 1rem;
+  color: #555;
+}
+
 .see-more-btn {
+  margin-top: 20px;
   background-color: #007bff;
-  color: white;
+  color: #fff;
   border: none;
-  padding: 12px 30px;
-  margin-top: 30px;
-  font-size: 1.1rem;
-  border-radius: 8px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: auto 0;
   cursor: pointer;
-  transition: background-color 0.3s ease-in-out;
+  font-size: 1rem;
 }
 
 .see-more-btn:hover {
   background-color: #0056b3;
 }
 
-/* Map Section */
-.map-container {
-  margin-top: 30px;
-}
-
 /* Team Section */
-.team-section {
-  padding: 50px;
-  text-align: center;
-  background-color: #f9f9f9;
-}
-
-.team-title {
-  font-size: 36px;
-  font-weight: bold;
-  margin-bottom: 50px;
-  color: #333;
-}
-
 .team-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
-}
-
-.team-card {
-  background-color: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  width: 300px;
-  transition: transform 0.3s ease;
-}
-
-.team-card:hover {
-  transform: scale(1.05);
-}
-.team-preview{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.team-img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 50%;
-  margin-bottom: 20px;
-}
-
-.team-name {
-  font-size: 24px;
-  font-weight: bold;
-  color: #333;
-}
-
-.team-role {
-  color: #888;
-  font-size: 18px;
-  margin-bottom: 10px;
-}
-
-.team-bio {
-  font-size: 16px;
-  color: #555;
-  margin-bottom: 20px;
-}
-
-.team-social {
   display: flex;
   justify-content: center;
   gap: 20px;
+  flex-wrap: wrap;
 }
 
-.team-social a {
-  color: #555;
-  font-size: 20px;
-  transition: color 0.3s ease;
+.team-card {
+  text-align: center;
+  width: 200px;
 }
 
-.team-social a:hover {
-  color: #0077b5; /* LinkedIn blue */
-}
-.faq-preview{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  margin: auto;
+.team-img {
+  width: 100%;
+  max-width: 150px; /* Limit the size of team images */
+  height: auto;
+  border-radius: 50%;
+  margin-bottom: 10px;
 }
 
-/* Responsive design for services and team sections */
-@media (max-width: 768px) {
-  /* Services List responsive */
-  .services-list {
-    flex-direction: column;
-    align-items: center;
-  }
+.team-name {
+  font-size: 1.2rem;
+  color: #333;
+}
 
-  .service-item {
-    flex-basis: 100%;
-  }
+/* FAQ Section */
+.faq-preview {
+  text-align: center;
+  padding: 40px 20px;
+}
 
-  /* Team Container responsive */
-  .team-container {
-    flex-direction: column;
-    gap: 40px;
+.faq-card {
+  margin: 0 auto;
+  max-width: 600px;
+  text-align: left; /* Align text within FAQ */
+}
+
+/* Map Section */
+.map-container {
+  padding: 20px;
+  margin: 40px 0;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center; /* Center map container */
+}
+
+.map-frame {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%; /* Ensure map takes full width */
+  max-width: 100%; /* Prevent overflow */
+}
+
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr; /* Stack the cards in a single column on smaller screens */
   }
 
   .team-card {
     width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .titles,
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .see-more-btn {
+    font-size: 0.9rem;
+  }
+
+  .service-card {
+    flex-direction: column; /* Stack content vertically */
+    text-align: center;
+  }
+
+  .service-icon {
+    margin: 0 0 10px 0; /* Adjust margin for stacked layout */
   }
 }

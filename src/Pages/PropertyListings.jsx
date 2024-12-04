@@ -1,8 +1,13 @@
 import './PropertyListing.css'; // Add this CSS file for styling
-// import lsg1 from '../assets/lsg1.jpg'; // Replace with real image paths
+import { useEffect } from 'react';
+import AOS from 'aos';
+import 'aos/dist/aos.css'; // Import AOS styles
+import PropTypes from 'prop-types'; // Import PropTypes
+
+// Import property images
 import lsg8 from '../assets/lsg8.jpg';
 import maitama4 from '../assets/maitama4.jpg'; 
-import maitama5 from '../assets/maitama5.jpg'; // Replace with real image paths
+import maitama5 from '../assets/maitama5.jpg';
 
 // Property data
 const properties = [
@@ -68,7 +73,7 @@ const properties = [
 // Component to render individual property card
 const PropertyCard = ({ property }) => {
   return (
-    <div className="property-card">
+    <div className="property-card" data-aos="fade-up">
       {/* Displaying only the first image */}
       <div className="property-image-slider">
         <img
@@ -93,8 +98,26 @@ const PropertyCard = ({ property }) => {
   );
 };
 
+// Prop validation for PropertyCard component
+PropertyCard.propTypes = {
+  property: PropTypes.shape({
+    id: PropTypes.number.isRequired,
+    title: PropTypes.string.isRequired,
+    location: PropTypes.string.isRequired,
+    price: PropTypes.string.isRequired,
+    SQM: PropTypes.string.isRequired,
+    Extra: PropTypes.string.isRequired,
+    InitialDeposit: PropTypes.string,
+    images: PropTypes.arrayOf(PropTypes.string).isRequired,
+  }).isRequired,
+};
+
 // Main component to display a list of properties
 const PropertyListing = () => {
+  useEffect(() => {
+    AOS.init({ duration: 1000 }); // AOS initialization
+  }, []);
+
   return (
     <div className="property-listing-container">
       {properties.map((property) => (
