@@ -56,6 +56,10 @@ const FAQSection = ({ limit = null }) => {
 
   return (
     <div className="faq-grid-container">
+      <p className="faq-description">
+        Here are some frequently asked questions (FAQs) about the MAITAMA GARDENS AGBOWA IKORODU estate. 
+        Find answers to common inquiries about the location, developer, payment process, and more.
+      </p>
       {displayedFaqs.map((faq, index) => (
         <div
           key={index}

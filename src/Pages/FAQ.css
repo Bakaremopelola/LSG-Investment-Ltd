@@ -1,34 +1,39 @@
-/* FAQ Container */
+/* General FAQ Container */
 .faq-grid-container {
   display: flex;
   flex-direction: column;
   gap: 20px;
   padding: 20px;
-  max-width: 1200px;
+  max-width: 1000px;
   margin: auto;
   width: 100%;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 /* FAQ Card */
 .faq-card {
+  margin: 0 auto;
+  width: 90vw;
   background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  padding: 20px 25px;
   cursor: pointer;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .faq-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
 }
 
 /* FAQ Question */
 .faq-question {
-  font-size: 1.2rem;
-  margin-bottom: 10px;
-  color: #007bff;
+  font-size: 1.25rem;
+  margin-bottom: 8px;
+  color: #343a40;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -36,23 +41,38 @@
   text-transform: capitalize;
 }
 
-.faq-answer {
-  font-size: 1rem;
-  color: #555;
-  line-height: 1.6;
-  margin-top: 10px;
-  display: none;
-}
-
-.faq-card.active .faq-answer {
-  display: block;
-}
-
-.faq-toggle-icon {
+.faq-question .faq-toggle-icon {
   font-size: 1.5rem;
   color: #007bff;
   font-weight: bold;
   transition: transform 0.3s ease;
+}
+
+/* FAQ Answer */
+.faq-answer {
+  font-size: 1rem;
+  color: #495057;
+  line-height: 1.6;
+  margin-top: 10px;
+  display: none;
+  border-top: 1px solid #e9ecef;
+  padding-top: 10px;
+}
+
+/* FAQ Description */
+.faq-description {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 20px;
+  line-height: 1.6;
+  text-align: center;
+  font-weight: 500;
+  padding: 0 20px;
+}
+
+
+.faq-card.active .faq-answer {
+  display: block;
 }
 
 .faq-card.active .faq-toggle-icon {
@@ -62,25 +82,25 @@
 /* Responsive Styles */
 @media screen and (max-width: 768px) {
   .faq-card {
-    width: 100%;
-    padding: 15px;
+    padding: 15px 20px;
+    width: 80vw;
   }
 
+  .faq-question {
+    font-size: 1.1rem;
+  }
+
+  .faq-answer {
+    font-size: 0.95rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
   .faq-question {
     font-size: 1rem;
   }
 
   .faq-answer {
     font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .faq-question {
-    font-size: 0.9rem;
-  }
-
-  .faq-answer {
-    font-size: 0.8rem;
   }
 }
