@@ -26,8 +26,10 @@ const ContactUs = () => {
       <section className="locations">
         <h2>Our Locations</h2>
         <ul>
-          <li><strong>Lagos:</strong> 123 Example St, Lagos, +2348000000000, contact@lsg.com</li>
-          <li><strong>Abuja:</strong> 45 Abuja Way, Abuja, +2348111111111, info@lsg.com</li>
+          <li><strong>Lagos:</strong>  Block F3, 212 HFP Shopping Complex, opposite
+          Abraham Adesanya Estate, Lekki Ajah, Lagos, <br/> +2347072268735
+          , LSGINVESTMENTLTD@gmail.com</li>
+          {/* <li><strong>Abuja:</strong> 45 Abuja Way, Abuja, +2348111111111, info@lsg.com</li> */}
         </ul>
       </section>
 
@@ -42,8 +44,8 @@ const ContactUs = () => {
       {/* Contact Us Section */}
       <section className="contact-us">
         <h2>Contact Us</h2>
-        <p><strong>Phone:</strong> +2348000000000</p>
-        <p><strong>Email:</strong> support@lsg.com</p>
+        <p><strong>Phone:</strong> +2347072268735</p>
+        <p><strong>Email:</strong> LSGINVESTMENTLTD@gmail.com</p>
         <p><strong>Office Hours:</strong> Mon-Fri: 9 AM - 5 PM</p>
       </section>
 

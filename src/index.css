@@ -1,7 +1,12 @@
-body{
+/* Global Styles */
+body {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     width: 100vw;
     overflow-x: hidden;
     font-family: 'Poppins', sans-serif;
-}
+  }
+  
+  /* Optional: You can add any additional global styles here */
+  

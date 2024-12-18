@@ -1,5 +1,6 @@
 /* Basic Footer Styling */
 .footer {
+  width: 100vw;
   background: linear-gradient(145deg, rgb(2, 2, 31), rgb(10, 10, 60));
   color: #f0f0f0;
   padding: 40px 20px;

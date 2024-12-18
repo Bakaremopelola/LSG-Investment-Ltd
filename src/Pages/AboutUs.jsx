@@ -1,28 +1,40 @@
 import OOS from '../assets/OOS.png';
 import vision from '../assets/vision.png';
 import ET from '../assets/ET.jpg';
+import samson from '../assets/samson.jpg';
+import taiwo from '../assets/taiwo.jpg';
+import balogun from '../assets/balogun.jpg';
+import al from '../assets/IMG_7442.jpg';
+import theo from '../assets/xxxx.jpg';
 import './AboutUs.css';
 
 const teamMembers = [
   {
-    name: 'John Doe',
-    role: 'Real Estate Agent',
-    image: 'john.jpg',
+    image: al,
+    name: "Olaitan Ridwan Oluwakemi",
+    role: 'Director',
+  },
+  
+  {
+    image: theo,
+    name: "Alabor Ufoma Okugbe",
+    role: "Director",
+  },
+
+  {
+    name: 'Idowu Bamidele Agemo',
+    role: 'Director',
+    image: balogun,
   },
   {
-    name: 'Jane Smith',
-    role: 'Construction Manager',
-    image: 'jane.jpg',
+    name: 'Taiwo Ibikunle ',
+    role: 'Secretary',
+    image: taiwo,
   },
   {
-    name: 'David Brown',
-    role: 'Real Estate Consultant',
-    image: 'david.jpg',
-  },
-  {
-    name: 'Sara Johnson',
-    role: 'Property Manager',
-    image: 'sara.jpg',
+    name: 'Samson Adeyemi Balogun',
+    role: 'Sales rep',
+    image: samson,
   },
 ];
 
@@ -94,7 +106,7 @@ const AboutUs = () => {
         <div className="team-grid">
           {teamMembers.map((member, index) => (
             <div key={index} className="team-member">
-              <img src={(`../assets/${member.image}`).default} alt={member.name} className="team-image" />
+              <img src={member.image} alt={member.name} className="team-image" />
               <h3>{member.name}</h3>
               <p>{member.role}</p>
             </div>
