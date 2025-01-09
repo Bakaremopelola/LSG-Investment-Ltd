@@ -24,7 +24,7 @@ const Footer = () => {
           <p><FaMapMarkerAlt /> LSG Investment Limited</p>
           <p><FaMapMarkerAlt /> Block F3, 212 HFP Shopping Complex, opposite <br />
             Abraham Adesanya Estate, Lekki Ajah, Lagos</p>
-          <p><FaEnvelope /> Email: <a href="mailto:LSGINVESTMENTLTD@GMAil.com">LSGINVESTMENTLTD@GMAil.com</a></p>
+          <p><FaEnvelope /> Email: <a href="mailto:https://lsginvestmentlimited@gmail.com">https://lsginvestmentlimited@gmail.com</a></p>
           <p><FaPhoneAlt /> Phone: <a href="tel:+2347072268735">+234 7072268735</a></p>
         </div>
 
