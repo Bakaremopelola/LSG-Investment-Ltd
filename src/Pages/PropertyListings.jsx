@@ -4,10 +4,9 @@ import AOS from 'aos';
 import 'aos/dist/aos.css'; // Import AOS styles
 import PropTypes from 'prop-types'; // Import PropTypes
 
-// Import property images
-import lsg8 from '../assets/lsg8.jpg';
-import maitama4 from '../assets/maitama4.jpg'; 
-import maitama5 from '../assets/maitama5.jpg';
+
+import maitama4 from '../assets/mets1.jpg'; 
+import maitama5 from '../assets/mets2.jpg';
 
 // Property data
 const properties = [
@@ -15,7 +14,7 @@ const properties = [
     id: 1,
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
-    price: "₦950,000.00",
+    price: "₦1.3M",
     SQM: "300sqm",
     Extra: "Survey plan and Deed of ownership",
     images: [maitama4], 
@@ -24,7 +23,7 @@ const properties = [
     id: 2,
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
-    price: "₦1.5M",
+    price: "₦2.3M",
     SQM: "500sqm",
     Extra: "Survey plan and Deed of ownership",
     images: [maitama5], 
@@ -36,7 +35,7 @@ const properties = [
     price: "₦7.5M",
     SQM: "1Acre",
     Extra: "Survey plan and Deed of ownership",
-    images: [lsg8], 
+    images: [maitama4], 
   },
   {
     id: 4,
@@ -46,13 +45,13 @@ const properties = [
     SQM: "1Acre",
     InitialDeposit: "₦3M",
     Extra: "Survey plan and Deed of ownership",
-    images: [lsg8], 
+    images: [maitama5], 
   },
   {
     id: 5,
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
-    price: "₦1.5M",
+    price: "₦2.3M",
     SQM: "500sqm",
     InitialDeposit: "₦300k",
     Extra: "Survey plan and Deed of ownership",
@@ -62,7 +61,7 @@ const properties = [
     id: 6,
     title: "Maitama Garden Gardens",
     location: "Agbowa Ikorodu Lagos",
-    price: "₦950,000.00",
+    price: "₦1.3M",
     SQM: "300sqm",
     InitialDeposit: "₦300k",
     Extra: "Survey plan and Deed of ownership",
