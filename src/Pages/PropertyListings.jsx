@@ -16,7 +16,6 @@ const properties = [
     location: "Agbowa Ikorodu Lagos",
     price: "₦1.3M",
     SQM: "300sqm",
-    Extra: "Survey plan and Deed of ownership",
     images: [maitama4], 
   },
   {
@@ -24,7 +23,6 @@ const properties = [
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
     SQM: "500sqm",
-    Extra: "Survey plan and Deed of ownership",
     images: [maitama5], 
   },
   {
@@ -32,7 +30,6 @@ const properties = [
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
     SQM: "1Acre",
-    Extra: "Survey plan and Deed of ownership",
     images: [maitama4], 
   },
   
@@ -60,7 +57,7 @@ const PropertyCard = ({ property }) => {
           <p>Initial Deposit: {property.InitialDeposit}</p>
         )}
         <p>Plot Size: {property.SQM}</p>
-        <p>{property.Extra}</p>
+      
       </div>
     </div>
   );
