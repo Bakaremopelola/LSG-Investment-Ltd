@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 // import img1 from '../assets/vid.mp4';
+import img from "https://drive.google.com/file/d/1J89liG-GxBYiNi01TyAmGJ1IA9mY6B2d/view?usp=sharing"
 import './Hero.css';
 
 const Hero = () => {
@@ -17,13 +18,15 @@ const Hero = () => {
   return (
     <div className="hero-container">
       {/* Background video */}
-      <video
+       <video
         ref={videoRef}
         className="background-video"
-        src="https://drive.google.com/file/d/1J89liG-GxBYiNi01TyAmGJ1IA9mY6B2d/view?usp=sharing"
+        src={videoUrl}
         autoPlay
         loop
         muted={isMuted} // Bind mute state to video
+        controls // Optional: Adds play/pause controls
+        style={{ width: "100%", height: "auto" }} // Make responsive
       />
       {/* Hero content with mute button */}
       <div className="hero-content">
