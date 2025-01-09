@@ -20,7 +20,7 @@ const Hero = () => {
       <video
         ref={videoRef}
         className="background-video"
-        src={img1}
+        src="https://drive.google.com/file/d/1J89liG-GxBYiNi01TyAmGJ1IA9mY6B2d/view?usp=sharing"
         autoPlay
         loop
         muted={isMuted} // Bind mute state to video
