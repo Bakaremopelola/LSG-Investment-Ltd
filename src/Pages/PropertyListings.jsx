@@ -23,7 +23,6 @@ const properties = [
     id: 2,
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
-    price: "₦2.3M",
     SQM: "500sqm",
     Extra: "Survey plan and Deed of ownership",
     images: [maitama5], 
@@ -32,41 +31,11 @@ const properties = [
     id: 3,
     title: "Maitama Garden Estates",
     location: "Agbowa Ikorodu Lagos",
-    price: "₦7.5M",
     SQM: "1Acre",
     Extra: "Survey plan and Deed of ownership",
     images: [maitama4], 
   },
-  {
-    id: 4,
-    title: "Maitama Garden Estates",
-    location: "Agbowa Ikorodu Lagos",
-    price: "₦7.5M",
-    SQM: "1Acre",
-    InitialDeposit: "₦3M",
-    Extra: "Survey plan and Deed of ownership",
-    images: [maitama5], 
-  },
-  {
-    id: 5,
-    title: "Maitama Garden Estates",
-    location: "Agbowa Ikorodu Lagos",
-    price: "₦2.3M",
-    SQM: "500sqm",
-    InitialDeposit: "₦300k",
-    Extra: "Survey plan and Deed of ownership",
-    images: [maitama5], 
-  },
-  {
-    id: 6,
-    title: "Maitama Garden Gardens",
-    location: "Agbowa Ikorodu Lagos",
-    price: "₦1.3M",
-    SQM: "300sqm",
-    InitialDeposit: "₦300k",
-    Extra: "Survey plan and Deed of ownership",
-    images: [maitama4], 
-  },
+  
 ];
 
 // Component to render individual property card
@@ -86,7 +55,7 @@ const PropertyCard = ({ property }) => {
       <div className="property-details">
         <h3>{property.title}</h3>
         <p>Location: {property.location}</p>
-        <p className="property-price">Starting from {property.price}</p>
+        
         {property.InitialDeposit && (
           <p>Initial Deposit: {property.InitialDeposit}</p>
         )}
