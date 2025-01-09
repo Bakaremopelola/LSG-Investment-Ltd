@@ -1,5 +1,5 @@
 import { useState, useRef } from 'react';
-import img1 from '../assets/vid.mp4';
+// import img1 from '../assets/vid.mp4';
 import './Hero.css';
 
 const Hero = () => {
