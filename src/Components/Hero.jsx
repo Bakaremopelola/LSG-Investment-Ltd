@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 // import img1 from '../assets/vid.mp4';
-import img from "https://drive.google.com/file/d/1QhwrMIOeTUZ2a7F9hcSElmtYhEHiRQkR/view?usp=drive_link"
+import videoUrl from "https://drive.google.com/file/d/1QhwrMIOeTUZ2a7F9hcSElmtYhEHiRQkR/view?usp=drive_link"
 import './Hero.css';
 
 const Hero = () => {
