@@ -13,28 +13,28 @@ import './AboutUs.css';
 const teamMembers = [
   {
     image: al,
-    name: "Olaitan Ridwan Oluwakemi",
+    name: "Build Olaitan Ridwan Oluwakemi",
     role: 'Director',
   },
   
   {
     image: theo,
-    name: "Alabor Ufoma Okugbe",
+    name: "Eng. Alabor Ufoma Okugbe",
     role: "Director",
   },
 
   {
-    name: 'Idowu Bamidele Agemo',
+    name: 'Esq Idowu Bamidele Agemo',
     role: 'Esq',
     image: balogun,
   },
   {
-    name: 'Taiwo Ibikunle ',
+    name: 'Ms. Taiwo Ibikunle ',
     role: 'Secretary',
     image: taiwo,
   },
   {
-    name: 'Samson Adeyemi Balogun',
+    name: 'Mr. Samson Adeyemi Balogun',
     role: 'Sales rep',
     image: samson,
   },
@@ -44,7 +44,7 @@ const teamMembers = [
     image: emma,
   },
   {
-    name: 'James Oluwatosin',
+    name: 'Mr. James Oluwatosin',
     role: 'Creative Designer',
     image: tosin,
   },
