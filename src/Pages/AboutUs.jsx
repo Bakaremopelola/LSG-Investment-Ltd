@@ -7,6 +7,7 @@ import balogun from '../assets/balogun.jpg';
 import al from '../assets/IMG_7442.jpg';
 import theo from '../assets/xxxx.jpg';
 import emma from "../assets/emma.jpg";
+import tosin from "../assets/tosin.jpg";
 import './AboutUs.css';
 
 const teamMembers = [
