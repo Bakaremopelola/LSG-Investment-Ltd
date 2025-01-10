@@ -25,7 +25,7 @@ const teamMembers = [
 
   {
     name: 'Idowu Bamidele Agemo',
-    role: 'Director',
+    role: 'Esq',
     image: balogun,
   },
   {
