@@ -21,8 +21,8 @@ const Footer = () => {
         {/* Address Section */}
         <div className="footer-address">
           <h3>Contact Information</h3>
-          <p><FaMapMarkerAlt /> Jendol superstore, Km1 opposite Akosoleri estate, Itoikin road, Ikorodu</p>
-          <p><FaMapMarkerAlt /> Block F3, 212 HFP Shopping Complex, opposite <br />
+          <p><FaMapMarkerAlt /> Jendol superstore, Km1 opposite Akosoleri estate, <br/> Itoikin road, Ikorodu</p>
+          <p><FaMapMarkerAlt /> Block F3, 212 HFP Shopping Complex, opposite <br/>
             Abraham Adesanya Estate, Lekki Ajah, Lagos</p>
           <p><FaEnvelope /> Email: <a href="mailto:https://lsginvestmentlimited@gmail.com">lsginvestmentlimited@gmail.com</a></p>
           <p><FaPhoneAlt /> Phone: <a href="tel:+2347072268735">+234 7072268735</a></p>
