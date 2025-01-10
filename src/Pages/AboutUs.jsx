@@ -45,7 +45,7 @@ const teamMembers = [
   },
   {
     name: 'James Oluwatosin',
-    role: 'Sales Executive',
+    role: 'Creative Designer',
     image: tosin,
   },
 ];
