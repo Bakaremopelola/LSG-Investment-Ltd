@@ -52,10 +52,12 @@
 // };
 
 // export default Hero;
+
+
 import { useState, useRef, useEffect } from 'react';
 import './Hero.css';
 
-const youtubeUrl = `https://www.youtube.com/embed/Hqi-H_47yfY?autoplay=1&mute=1`; // Add mute=1 to start the video muted
+const youtubeUrl = `https://www.youtube.com/embed/Hqi-H_47yfY?autoplay=1&mute=1&loop=1&playlist=Hqi-H_47yfY`; // Add loop and playlist parameters for looping
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true); // Mute by default
