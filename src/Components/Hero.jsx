@@ -54,17 +54,15 @@ const Hero = () => {
   return (
     <div className="hero-container">
       {/* YouTube iframe */}
-      <iframe
-        ref={iframeRef}
-        width="100%"
-        height="100%"
-        src={youtubeUrl}
-        title="Hero video"
-        frameBorder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowFullScreen
-        style={{ border: 'none' }}
-      ></iframe>
+     <iframe
+  src="https://player.vimeo.com/video/your_video_id"
+  width="100%"
+  height="100%"
+  frameborder="0"
+  allow="autoplay; fullscreen; picture-in-picture"
+  allowfullscreen
+></iframe>
+
 
       {/* Hero content with mute button */}
       <div className="hero-content">
