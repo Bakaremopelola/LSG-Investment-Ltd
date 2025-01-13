@@ -16,7 +16,7 @@
 /* Hero Section */
 .hero-container {
   width: 100%;
-  height: 100vh;
+  height: 100vh; /* Full viewport height */
   position: relative;
   overflow: hidden;
   display: flex;
@@ -31,12 +31,15 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  z-index: -1;
+  z-index: -1; /* Places video behind content */
 }
 
 .hero-content {
-  position: relative;
-  z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); /* Centers the button and content */
+  z-index: 10; /* Ensures button is above the video */
   text-align: center;
   color: white;
   max-width: 800px;
@@ -55,6 +58,7 @@
   margin-bottom: 2rem;
 }
 
+/* CTA Button */
 .cta-btn {
   background-color: #002d24;
   color: white;
@@ -93,19 +97,28 @@
   border-radius: 10px;
   border: 1px solid #ddd;
 }
+
+/* Hero Content Centering */
 .hero-container {
   position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
   overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Centers the content horizontally and vertically */
 }
 
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers the button */
+  transform: translate(-50%, -50%);
   z-index: 10; /* Ensures button is above the video */
+  text-align: center;
+  color: white;
+  padding: 20px;
+  margin: 0 auto;
 }
 
 .mute-btn {
@@ -142,6 +155,11 @@
     margin-top: -20px;
     padding: 30px 15px;
   }
+
+  .mute-btn {
+    font-size: 20px; /* Adjust mute button size */
+    padding: 8px 16px; /* Adjust padding */
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -161,5 +179,10 @@
   .quick-service-request {
     margin-top: -10px;
     padding: 20px 10px;
+  }
+
+  .mute-btn {
+    font-size: 18px; /* Adjust mute button size */
+    padding: 6px 12px; /* Adjust padding */
   }
 }
