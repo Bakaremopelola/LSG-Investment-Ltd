@@ -1,7 +1,8 @@
 import { useState, useRef, useEffect } from 'react';
 import './Hero.css';
 
-const youtubeUrl = `https://www.youtube.com/embed/Hqi-H_47yfY?autoplay=1&mute=1&loop=1&playlist=Hqi-H_47yfY&modestbranding=1&controls=0&rel=0&showinfo=0&fs=0&iv_load_policy=3`; // Add loop, mute, and hide UI controls
+// Vimeo Embed URL
+const vimeoUrl = "https://player.vimeo.com/video/1046495129?autoplay=1&loop=1&muted=1&background=1"; // Add loop, mute, and autoplay
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true); // Mute by default
@@ -9,60 +10,46 @@ const Hero = () => {
   const [player, setPlayer] = useState(null);
 
   useEffect(() => {
-    // Load YouTube Iframe API and initialize the player
-    const loadYTAPI = () => {
-      if (window.YT && iframeRef.current) {
-        const newPlayer = new window.YT.Player(iframeRef.current, {
-          events: {
-            'onReady': () => {
-              setPlayer(newPlayer); // Set player once it's ready
-            },
-          },
-        });
-      }
-    };
+    // Initialize Vimeo Player API once iframe is loaded
+    if (iframeRef.current && !player) {
+      const VimeoPlayer = require('@vimeo/player'); // Import Vimeo Player API
+      const newPlayer = new VimeoPlayer(iframeRef.current);
+      setPlayer(newPlayer);
 
-    if (window.YT) {
-      loadYTAPI();
-    } else {
-      const script = document.createElement('script');
-      script.src = 'https://www.youtube.com/iframe_api';
-      script.onload = loadYTAPI;
-      document.body.appendChild(script);
+      // Set up mute behavior based on initial state
+      newPlayer.setVolume(isMuted ? 0 : 1);
+
+      // Clean up when the component unmounts
+      return () => {
+        newPlayer.destroy();
+      };
     }
-
-    return () => {
-      // Clean up and remove the API script when the component unmounts
-      const script = document.querySelector('script[src="https://www.youtube.com/iframe_api"]');
-      if (script) {
-        script.remove();
-      }
-    };
-  }, []);
+  }, [player, isMuted]);
 
   const toggleMute = () => {
     if (player) {
       if (isMuted) {
-        player.unMute();
+        player.setVolume(1); // Unmute
       } else {
-        player.mute();
+        player.setVolume(0); // Mute
       }
-      setIsMuted(!isMuted);
+      setIsMuted(!isMuted); // Toggle mute state
     }
   };
 
   return (
     <div className="hero-container">
-      {/* YouTube iframe */}
-     <iframe
-  src="https://player.vimeo.com/video/your_video_id"
-  width="100%"
-  height="100%"
-  frameborder="0"
-  allow="autoplay; fullscreen; picture-in-picture"
-  allowfullscreen
-></iframe>
-
+      {/* Vimeo iframe with ref */}
+      <iframe
+        ref={iframeRef}
+        src={vimeoUrl}
+        width="100%"
+        height="100%"
+        frameBorder="0"
+        allow="autoplay; fullscreen; picture-in-picture"
+        allowFullScreen
+        title="Vimeo Background Video"
+      ></iframe>
 
       {/* Hero content with mute button */}
       <div className="hero-content">
