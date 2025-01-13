@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Player } from '@vimeo/player'; // Import the Vimeo Player API
 import './Hero.css';
 
 // Vimeo Embed URL
@@ -12,8 +13,7 @@ const Hero = () => {
   useEffect(() => {
     // Initialize Vimeo Player API once iframe is loaded
     if (iframeRef.current && !player) {
-      const VimeoPlayer = require('@vimeo/player'); // Import Vimeo Player API
-      const newPlayer = new VimeoPlayer(iframeRef.current);
+      const newPlayer = new Player(iframeRef.current); // Initialize player
       setPlayer(newPlayer);
 
       // Set up mute behavior based on initial state
