@@ -13,7 +13,7 @@ import './AboutUs.css';
 const teamMembers = [
   {
     image: al,
-    name: "Build Olaitan Ridwan Oluwakemi",
+    name: "Bldr Olaitan Ridwan Oluwakemi",
     role: 'Director',
   },
   
@@ -24,8 +24,8 @@ const teamMembers = [
   },
 
   {
-    name: 'Esq Idowu Bamidele Agemo',
-    role: 'Esq',
+    name: 'Idowu Bamidele Agemo Esq',
+    role: 'Legal adviser/Director',
     image: balogun,
   },
   {

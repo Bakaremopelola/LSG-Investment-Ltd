@@ -70,9 +70,10 @@ const HomePage = () => {
       <section className="team-preview" data-aos="fade-left">
         <h2>Meet Our Team</h2>
         <div className="team-container">
-          {[{ img: al, name: "Olaitan Ridwan Oluwakemi", role: "Director" },
-            { name: 'Idowu Bamidele Agemo', role: 'Director', img: balogun },
-            { img: theo, name: "Alabor Ufoma Okugbe", role: "Director" }
+          {[  
+            {img: al, name: "Bldr Olaitan Ridwan Oluwakemi", role: 'Director' },
+            {img: theo, name: "Eng. Alabor Ufoma Okugbe",role: "Director"},      
+            { name: 'Idowu Bamidele Agemo Esq', role: 'Legal adviser/Director', img: balogun}
           ].map((member, index) => (
             <div key={index} className="team-card" data-aos="zoom-in">
               <img src={member.img} alt={member.name} className="team-img" />
