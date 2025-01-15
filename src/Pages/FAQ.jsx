@@ -53,7 +53,6 @@ const FAQSection = ({ limit = null }) => {
   ];
 
   const displayedFaqs = limit ? faqs.slice(0, limit) : faqs;
-
   return (
     <div className="faq-grid-container">
       <p className="faq-description">
@@ -84,9 +83,6 @@ FAQSection.propTypes = {
   limit: PropTypes.number, // 'limit' should be a number or null
 };
 
-// Default props
-FAQSection.defaultProps = {
-  limit: null, // Default to showing all FAQs
-};
+
 
 export default FAQSection;
