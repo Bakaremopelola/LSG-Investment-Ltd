@@ -1,5 +1,7 @@
 import { useState, useRef } from "react";
 import "./Hero.css";
+import videoSrc from "../assets/video.mp4";
+
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -24,10 +26,7 @@ const Hero = () => {
         playsInline
         preload="metadata"
       >
-       
-        <source src="/video.mp4" type="video/mp4" />
-       
-        Your browser does not support the video tag.
+       <source src={videoSrc} type="video/mp4" />
       </video>
 
       {/* Hero content */}
