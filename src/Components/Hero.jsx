@@ -1,31 +1,35 @@
 import { useState, useRef } from 'react';
 import './Hero.css';
-import videoUrl from '../../public/MATAMA.mp4'; 
 
 const Hero = () => {
-  const [isMuted, setIsMuted] = useState(true); 
-  const videoRef = useRef(null); 
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef(null);
 
   const toggleMute = () => {
     if (videoRef.current) {
       const videoElement = videoRef.current;
-      videoElement.muted = !isMuted; 
-      setIsMuted(!isMuted); 
+      videoElement.muted = !isMuted;
+      setIsMuted(!isMuted);
     }
   };
 
   return (
     <div className="hero-container">
-      {/* Local video with ref */}
+      {/* Lazy-loaded video */}
       <video
         ref={videoRef}
         className="hero-video"
-        src={videoUrl}
         autoPlay
         loop
         muted={isMuted}
         playsInline
-      ></video>
+        preload="metadata" // Only load metadata initially
+        style={{ width: '100%', height: 'auto' }}
+        loading="lazy" // Lazy loading for better performance
+      >
+        <source src="/MATAMA.mp4" type="video/mp4" /> {/* Adjusted the path */}
+        Your browser does not support the video tag.
+      </video>
 
       {/* Hero content with mute button */}
       <div className="hero-content">

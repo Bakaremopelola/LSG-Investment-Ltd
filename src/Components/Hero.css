@@ -1,27 +1,12 @@
-/* Button Styles */
-.mute-btn {
-  background-color: #ff9900;
-  color: white;
-  padding: 8px 10px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.mute-btn:hover {
-  background-color: #cc7a00;
-}
-
 /* Hero Section */
 .hero-container {
+  position: relative;
   width: 100%;
   height: 100vh; /* Full viewport height */
-  position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center; /* Centers content horizontally and vertically */
 }
 
 .background-video {
@@ -30,16 +15,17 @@
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: cover; /* Ensures video covers the entire container without distortion */
   z-index: -1; /* Places video behind content */
 }
 
+/* Hero Content */
 .hero-content {
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%); /* Centers the button and content */
-  z-index: 10; /* Ensures button is above the video */
+  transform: translate(-50%, -50%); /* Centers content */
+  z-index: 10; /* Ensures content is above the video */
   text-align: center;
   color: white;
   max-width: 800px;
@@ -58,69 +44,7 @@
   margin-bottom: 2rem;
 }
 
-/* CTA Button */
-.cta-btn {
-  background-color: #002d24;
-  color: white;
-  padding: 12px 30px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-}
-
-.cta-btn:hover {
-  background-color: #004d3c;
-}
-
-/* Quick Service Request Section */
-.quick-service-request {
-  background-color: white;
-  padding: 40px 20px;
-  text-align: center;
-  margin-top: -40px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-/* Map Section */
-.map-container {
-  width: 100%;
-  height: 400px;
-  margin-top: 20px;
-  position: relative;
-}
-
-#map {
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  border: 1px solid #ddd;
-}
-
-/* Hero Content Centering */
-.hero-container {
-  position: relative;
-  width: 100%;
-  height: 100vh; /* Full viewport height */
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center; /* Centers the content horizontally and vertically */
-}
-
-.hero-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10; /* Ensures button is above the video */
-  text-align: center;
-  color: white;
-  padding: 20px;
-  margin: 0 auto;
-}
-
+/* Mute Button */
 .mute-btn {
   background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
   color: white;
@@ -146,16 +70,6 @@
     font-size: 1.2rem;
   }
 
-  .cta-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  .quick-service-request {
-    margin-top: -20px;
-    padding: 30px 15px;
-  }
-
   .mute-btn {
     font-size: 20px; /* Adjust mute button size */
     padding: 8px 16px; /* Adjust padding */
@@ -169,16 +83,6 @@
 
   .hero-content p {
     font-size: 1rem;
-  }
-
-  .cta-btn {
-    padding: 8px 15px;
-    font-size: 0.8rem;
-  }
-
-  .quick-service-request {
-    margin-top: -10px;
-    padding: 20px 10px;
   }
 
   .mute-btn {
