@@ -26,6 +26,7 @@ const ContactUs = () => {
       <section className="locations">
         <h2>Our Locations</h2>
         <ul>
+        <li><strong>Ikorodu:</strong> Jendol superstore , Km1 opposite Akosoleri estate, Itoikin road, Ikorodu</li>
           <li><strong>Lagos:</strong>  Block F3, 212 HFP Shopping Complex, opposite
           Abraham Adesanya Estate, Lekki Ajah, Lagos, <br/> +2347072268735
           , https://lsginvestmentlimited@gmail.com</li>
