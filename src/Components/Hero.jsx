@@ -1,6 +1,6 @@
 import { useState, useRef } from 'react';
 import './Hero.css';
-import videoUrl from '../assets/MATAMA.mp4'; 
+import videoUrl from '../../public/MATAMA.mp4'; 
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true); 
