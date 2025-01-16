@@ -1,0 +1,121 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background-color: #f7f8fc; /* Subtle light background */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  /* Login Container */
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    width: 100%;
+    background-color: white; /* White background */
+  }
+  
+  /* Login Card */
+  .login-card {
+    background-color: white;
+    padding: 40px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 90%;
+    text-align: center;
+  }
+  
+  .login-card h1 {
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+    color: #002d24; /* Dark teal */
+  }
+  
+  /* Form */
+  .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .form-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease-in-out;
+  }
+  
+  .form-group input:focus {
+    border-color: #002d24; /* Dark teal */
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 45, 36, 0.3);
+  }
+  
+  /* Login Button */
+  .login-btn {
+    background-color: #002d24; /* Dark teal */
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+    width: 100%;
+  }
+  
+  .login-btn:hover {
+    background-color: #004d3c; /* Slightly lighter teal */
+  }
+  
+  /* Responsive Design */
+  @media screen and (max-width: 768px) {
+    .login-card {
+      padding: 30px 20px;
+    }
+  
+    .login-card h1 {
+      font-size: 1.6rem;
+    }
+  
+    .form-group input {
+      font-size: 0.9rem;
+    }
+  
+    .login-btn {
+      font-size: 0.9rem;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .login-card {
+      padding: 20px 15px;
+    }
+  
+    .login-card h1 {
+      font-size: 1.4rem;
+    }
+  
+    .form-group input {
+      font-size: 0.85rem;
+    }
+  
+    .login-btn {
+      font-size: 0.85rem;
+    }
+  }
+  
