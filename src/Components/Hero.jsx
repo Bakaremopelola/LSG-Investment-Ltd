@@ -24,11 +24,9 @@ const Hero = () => {
         playsInline
         preload="metadata"
       >
-        {/* Provide multiple formats for better compatibility */}
-        <source src="/matama.webm" type="video/webm" />
-        <source src="/matama.mp4" type="video/mp4" />
-        <source src="/matama.ogv" type="video/ogg" />
-        {/* Fallback message */}
+       
+        <source src="/video.mp4" type="video/mp4" />
+       
         Your browser does not support the video tag.
       </video>
 
