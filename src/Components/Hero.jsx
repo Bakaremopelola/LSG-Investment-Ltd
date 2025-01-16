@@ -1,5 +1,5 @@
-import { useState, useRef } from 'react';
-import './Hero.css';
+import { useState, useRef } from "react";
+import "./Hero.css";
 
 const Hero = () => {
   const [isMuted, setIsMuted] = useState(true);
@@ -17,21 +17,25 @@ const Hero = () => {
     <div className="hero-container">
       <video
         ref={videoRef}
-        className="hero-video"
+        className="background-video"
         autoPlay
         loop
         muted={isMuted}
         playsInline
-        preload="metadata" // Lazy load metadata
-        style={{ width: '100%', height: 'auto' }}
+        preload="metadata"
       >
-        <source src="/matama.mp4?version=1" type="video/mp4" />
+        {/* Provide multiple formats for better compatibility */}
+        <source src="/matama.webm" type="video/webm" />
+        <source src="/matama.mp4" type="video/mp4" />
+        <source src="/matama.ogv" type="video/ogg" />
+        {/* Fallback message */}
         Your browser does not support the video tag.
       </video>
 
+      {/* Hero content */}
       <div className="hero-content">
         <button className="mute-btn" onClick={toggleMute}>
-          {isMuted ? '🔉' : '🔇'}
+          {isMuted ? "🔉" : "🔇"}
         </button>
       </div>
     </div>
