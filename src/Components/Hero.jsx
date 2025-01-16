@@ -15,7 +15,6 @@ const Hero = () => {
 
   return (
     <div className="hero-container">
-      {/* Lazy-loaded video */}
       <video
         ref={videoRef}
         className="hero-video"
@@ -23,15 +22,13 @@ const Hero = () => {
         loop
         muted={isMuted}
         playsInline
-        preload="metadata" // Only load metadata initially
+        preload="metadata" // Lazy load metadata
         style={{ width: '100%', height: 'auto' }}
-        loading="lazy" // Lazy loading for better performance
       >
-        <source src="/MATAMA.mp4" type="video/mp4" /> {/* Adjusted the path */}
+        <source src="/matama.mp4?version=1" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
 
-      {/* Hero content with mute button */}
       <div className="hero-content">
         <button className="mute-btn" onClick={toggleMute}>
           {isMuted ? '🔉' : '🔇'}
