@@ -1,0 +1,32 @@
+import React from "react";
+import { useNavigate } from "react-router-dom";
+
+const Banners = () => {
+
+    const navigate = useNavigate();
+
+    const handleSubmit = () => {
+        navigate("/build")
+    }
+    return (
+        <section className="w-[80vw] mx-auto  h-[30vh] flex justify-center px-16 py-6">
+            <div className="bg-[#1D2150] text-white rounded-2xl w-full px-8 py-6 flex flex-col md:flex-row items-center justify-between shadow-lg">
+                {/* Left Content */}
+                <div className="text-center md:text-left">
+                    <h2 className="text-4xl font-semibold">Get a FREE Building Quote.</h2>
+                    <p className="mt-2 text-2xl w-[40vw]">
+                        Get a free, no-obligation quote tailored to your needs. Quick,
+                        transparent, and hassle-free.
+                    </p>
+                </div>
+
+                {/* Button */}
+                <button onClick={handleSubmit} className="mt-4 md:mt-0 bg-white text-[#1D2150] font-semibold px-8 py-4 rounded-full shadow-md hover:bg-gray-100 transition">
+                    Get a Free Quote
+                </button>
+            </div>
+        </section>
+    );
+};
+
+export default Banners;
