@@ -1,0 +1,88 @@
+import React from "react";
+import { MapPin, Building2, Mail, Phone, Facebook, Twitter, Instagram } from "lucide-react";
+import ex from "../assets/Frame66.png"
+
+
+
+const BuildingQuot = () => {
+  return (
+    <div className="min-h-screen bg-gray-100 flex flex-col">
+      {/* Banner Section */}
+      <div className="w-full  text-center ">
+        <img
+          src={ex} 
+          alt="Pay Zero!"
+          className="mx-auto w-full"
+        />
+      </div>
+
+      {/* Main Content */}
+      <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
+        {/* Left: Contact Info */}
+        <div className="w-full md:w-1/3 bg-blue-900 text-white p-8 rounded-l-lg">
+          <h2 className="text-2xl font-bold mb-4">Our Contact Info:</h2>
+          <p className="mb-2">
+            Kindly reach out to us via any of our communication channels below.
+          </p>
+          <ul className="space-y-4">
+            <li className="flex items-center gap-2">
+              <MapPin size={20} /> Jendol Superstore, Km 1 Opposite Akasoleri Estate, Ikorodu, Lagos.
+            </li>
+            <li className="flex items-center gap-2">
+              <Building2 size={20} /> Block F2, HFP Shopping Complex, Lekki Ajah, Lagos.
+            </li>
+            <li className="flex items-center gap-2">
+              <Mail size={20} /> lsginvestmentlimited@gmail.com
+            </li>
+            <li className="flex items-center gap-2">
+              <Phone size={20} /> +234 712 278 2135
+            </li>
+          </ul>
+          <div className="mt-6">
+            <h3 className="text-lg font-semibold">Follow Us</h3>
+            <div className="flex space-x-4 mt-2">
+              <a href="#" className="text-white">
+                <Facebook size={24} />
+              </a>
+              <a href="#" className="text-white">
+                <Twitter size={24} />
+              </a>
+              <a href="#" className="text-white">
+                <Instagram size={24} />
+              </a>
+            </div>
+          </div>
+        </div>
+
+        {/* Right: Quote Form */}
+        <div className="w-full md:w-2/3 p-8">
+          <h2 className="text-2xl font-bold text-gray-800 mb-6">
+            Input Details to Get a Free Building Quote.
+          </h2>
+
+          <form className="space-y-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="text" placeholder="First name*" className="p-3 border rounded-md w-full" />
+              <input type="text" placeholder="Last name*" className="p-3 border rounded-md w-full" />
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <input type="tel" placeholder="Phone*" className="p-3 border rounded-md w-full" />
+              <input type="email" placeholder="Email*" className="p-3 border rounded-md w-full" />
+            </div>
+
+            <input type="text" placeholder="Number of plots" className="p-3 border rounded-md w-full" />
+
+            <textarea placeholder="Purpose of purchase" className="p-3 border rounded-md w-full h-24"></textarea>
+
+            <button className="bg-blue-900 text-white py-3 px-6 rounded-lg w-full md:w-auto">
+              Get Quote
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default BuildingQuot;
