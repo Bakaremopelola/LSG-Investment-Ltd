@@ -1,6 +1,7 @@
 import React from "react";
 import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import ex from "../assets/Frame68.png"
+import Banner from "../components/homepage/Banner";
 
 
 
@@ -17,22 +18,29 @@ const Buyer = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto p-4 flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
+      <div className="container mx-auto p-4 h-[70vh] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
         {/* Left: Contact Info */}
-        <div className="w-full md:w-1/3 bg-blue-900 text-white p-8 rounded-l-lg">
-          <h2 className="text-2xl font-bold mb-4">Our Contact Info:</h2>
-          <p className="mb-2">
+        <div className="w-full md:w-1/3 bg-[#1D2150] text-white p-8 px-12 rounded-l-lg">
+          <h2 className="text-4xl font-normal mb-6">Our Contact Info:</h2>
+          <p className="mb-12">
             Kindly reach out to us on any of our communication channels below.
           </p>
           <ul className="space-y-4">
-            <li className="flex items-center gap-2">
-              <MapPin size={20} /> Jendol Superstore, Km 1, Opposite Akasoleri Estate, Ikorodu, Lagos.
+            <li className="flex items-start gap-4">
+              <MapPin size={20} />
+              <span>
+                Jendol Superstore, Km 1, Opposite Akasoleri Estate, Ikorodu, Lagos.
+              </span>
             </li>
-            <li className="flex items-center gap-2">
-              <MapPin size={20} /> Block F2, HFP Shopping Complex, Lekki Ajah, Lagos.
+            <li className="flex items-start gap-4">
+              <MapPin size={20} />
+              <span>
+                Block F2, HFP Shopping Complex, Opposite Abraham Adesanya Estate, Lekki Ajah, Lagos.
+              </span>
             </li>
-            <li className="flex items-center gap-2">
-              <Mail size={20} /> lsginvestmentlimited@gmail.com
+            <li className="flex items-start gap-4">
+              <Mail size={20} />
+              <span>lsginvestmentlimited@gmail.com</span>
             </li>
           </ul>
           <div className="mt-6">
@@ -75,6 +83,9 @@ const Buyer = () => {
             </button>
           </form>
         </div>
+      </div>
+      <div className="w-[80vw] mx-auto z-10 mb-16">
+        <Banner />
       </div>
     </div>
   );

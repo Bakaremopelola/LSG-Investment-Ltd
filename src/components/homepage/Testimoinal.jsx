@@ -15,7 +15,7 @@ const testimonials = [
   
   const Testimonials = () => {
     return (
-      <section className="px-24 lg:px-64 py-64 bg-[#F8FAFC] text-center">
+      <section className="px-8 md:px-24 lg:px-64 py-64 bg-[#F8FAFC] text-center">
         {/* Title */}
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
           What our Clients Say About Us
@@ -29,7 +29,7 @@ const testimonials = [
               className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative"
             >
               {/* Stars */}
-              <div className="flex justify-center mb-3">
+              <div className="flex justify-end mb-3">
                 {"★★★★★".split("").map((star, i) => (
                   <span key={i} className="text-yellow-400 text-lg">
                     {star}
@@ -38,15 +38,15 @@ const testimonials = [
               </div>
   
               {/* Testimonial Text */}
-              <p className="text-sm leading-relaxed">{testimonial.text}</p>
+              <p className="text-sm md:text-xl leading-relaxed">{testimonial.text}</p>
   
               {/* Profile Placeholder */}
-              <div className="absolute -bottom-12 left-1/2 transform -translate-x-1/2">
-                <div className="w-20 h-20 bg-gray-300 rounded-full"></div>
+              <div className="absolute -bottom-5 md:-bottom-12 left-1/4 transform -translate-x-1/2">
+                <div className="w-12 h-12 md:w-24 md:h-24 bg-gray-300 rounded-full"></div>
               </div>
   
               {/* Name */}
-              <p className="mt-8 text-yellow-400 font-semibold">{testimonial.name}</p>
+              <p className="mt-8 text-yellow-400 flex justify-end pr-12 font-semibold">{testimonial.name}</p>
             </div>
           ))}
         </div>

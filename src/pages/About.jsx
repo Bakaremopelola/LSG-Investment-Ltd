@@ -7,6 +7,8 @@ import ez from "../assets/Frame185.png"
 import OurServices from '../components/homepage/Services';
 import WhyChooseUs from '../components/services/WhyChoose';
 import Testimonials from '../components/homepage/Testimoinal';
+import MeetTeam from '../components/homepage/MeetTeam';
+import Banner from '../components/homepage/Banner';
 
 const About = () => {
   const sections = [
@@ -64,22 +66,22 @@ const About = () => {
      <div className=" bg-gray-100 w-[100vw] overflow-x-hidden p-0 m-0 flex flex-col">
           {/* Hero Section */}
           <div className="w-[100vw] bg-white text-center ">
-           <img src={ea} alt="" />
+           <img src={ea} alt=""className='w-[100vw]'/>
           </div>
 
           <section className="bg-gray-100 py-12 px-4">
-      <div className="max-w-6xl mx-auto">
+      <div className="md:w-[80vw] mx-auto ">
         {sections.map((section) => (
           <div
             key={section.id}
-            className={`flex flex-col md:flex-row ${
+            className={`flex flex-col md:flex-row my-16 ${
               section.reverse ? "md:flex-row-reverse" : ""
-            } items-center mb-12`}
+            } items-center gap-16 mb-12 `}
           >
             {/* Text Section */}
-            <div className="md:w-1/2 px-6">
-              <h2 className="text-2xl font-bold text-[#1D2150] mb-4">{section.title}</h2>
-              <p className="text-gray-700">{section.content}</p>
+            <div className="md:w-1/2 px-8">
+              <h2 className="text-4xl text-center font-bold text-[#1D2150] mb-4">{section.title}</h2>
+              <p className="text-gray-700 text-xl">{section.content}</p>
             </div>
 
             {/* Image Section */}
@@ -87,7 +89,7 @@ const About = () => {
               <img
                 src={section.image}
                 alt={section.title}
-                className="w-full h-64 object-cover rounded-lg shadow-md"
+                className="w-full h-72 object-cover rounded-lg shadow-md"
               />
             </div>
           </div>
@@ -95,17 +97,17 @@ const About = () => {
       </div>
     </section>
 
-    <section className="bg-gray-100 py-12 px-4">
-      <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-[#1D2150] mb-2">Our Values</h2>
-        <p className="text-gray-600 mb-8">
+    <section className="bg-gray-100 py-12 ">
+      <div className="w-[100vw] mx-0 text-center">
+        <h2 className="text-5xl font-bold text-[#1D2150] mb-2">Our Values</h2>
+        <p className="text-gray-600 text-2xl mb-8">
           Choose us for our transparency, expertise, and personalized approach to real estate.
         </p>
 
-        <div className="bg-[#1D2150] rounded-xl p-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-[#1D2150] rounded-xl p-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {values.map((value, index) => (
             <div key={index} className="flex flex-col items-center text-center text-white">
-              <div className="bg-white p-3 rounded-full mb-4">{value.icon}</div>
+              <div className="bg-white text-black p-3 rounded-full flex justify-center items-center mb-4">{value.icon}</div>
               <h3 className="text-lg font-semibold">{value.title}</h3>
               <p className="text-sm">{value.description}</p>
             </div>
@@ -118,6 +120,11 @@ const About = () => {
 <OurServices/>
 <WhyChooseUs/>
 <Testimonials/>
+<MeetTeam/>
+
+<div className="w-[80vw] mx-auto z-10 mb-16">
+<Banner />
+</div>
 
     </div>
   )

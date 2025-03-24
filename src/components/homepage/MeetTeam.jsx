@@ -72,7 +72,7 @@ const MeetTeam = () => {
               alt={member.name}
               className="rounded-t-lg object-cover  w-[450px] h-[500px]"
             />
-            <div className="absolute bottom-13 left-0 bg-green-600 text-black w-[15vw] text-2xl px-3 py-2 rounded">
+            <div className="absolute bottom-13 left-0 bg-green-600 text-black md:w-[25vw] lg:w-[15vw] text-2xl px-3 py-2 rounded">
               {member.name}
             </div>
             <p className="text-center text-gray-700 mt-3 pb-4 font-medium">{member.role}</p>

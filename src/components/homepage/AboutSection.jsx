@@ -28,20 +28,20 @@ const AboutSection = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex px-16 gap-0 items-center m-0 justify-center">
+      <div className="flex sm:flex-col md:flex-row px-16 gap-0 items-center m-0 justify-center">
         {/* Left: Image */}
         <div className=" h-[600px] w-[20vw] rounded-lg overflow-hidden">
           <img
             src={houseImage}
             alt="House"
-            className="w-full h-full object-cover rounded-lg"
+            className="w-full h-full object-cover lg:flex hidden rounded-lg"
           />
         </div>
 
 
-        <div className="bg-[#1D2150] text-white py-12 px-20 w-[25vw] h-[700px] shadow-lg">
-          <h3 className="text-4xl font-semibold mb-3">About Us</h3>
-          <p className="text-[1.3em] leading-relaxed">
+        <div className="bg-[#1D2150] text-white px-10 py-12 lg:px-20 w-[35vw] lg:w-[25vw] h-[700px] shadow-lg">
+          <h3 className="text-xl lg:text-4xl font-semibold mb-3">About Us</h3>
+          <p className=" text- lg:text-[1.3em] leading-relaxed">
             Founded in 2024 by seasoned engineers and builders, LSG Investment
             Limited is a visionary real estate company with over a decade of
             expertise in transforming Nigeria’s property landscape. We are
@@ -56,11 +56,11 @@ const AboutSection = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="flex flex-col w-[40vw] h-[700px] px-20 py-12 shadow-2xl ">
+        <div className="flex flex-col w-[40vw] h-[700px] px-10 lg:px-20 py-12 shadow-2xl ">
           <h3 className="text-4xl text-center mb-8 font-semibold text-gray-900 ">
             Why Choose Us
           </h3>
-          <ul className="space-y-3 text-gray-700 text-2xl">
+          <ul className="space-y-3 text-gray-700 lg:text-2xl">
             <li className="flex gap-16 justify-start">
               <CgCommunity size={100} />
               <div>

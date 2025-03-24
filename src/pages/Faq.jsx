@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { FaChevronDown } from "react-icons/fa";
 import ex from '../assets/Frame663.png'
 import ey from '../assets/Frame160.png'
+import Banner from "../components/homepage/Banner";
 
 
 const faqs = [
@@ -49,11 +50,11 @@ const Faq = () => {
         <div className="min-h-screen bg-gray-100 flex flex-col">
             {/* Hero Section */}
             <div className="w-full bg-white text-center ">
-                <img src={ex} alt="" />
+                <img className="w-[100vw]" src={ex} alt="" />
             </div>
 
             <section className="bg-gray-100 py-12 px-4">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="w-[80vw] mx-auto text-center">
                     <h2 className="text-2xl font-bold text-[#1D2150] mb-6">General Questions</h2>
 
                     <div className="space-y-4">
@@ -82,7 +83,7 @@ const Faq = () => {
 
 
             <section className="bg-gray-100 py-12 px-4">
-                <div className="max-w-4xl mx-auto text-center">
+                <div className="w-[80vw] mx-auto text-center">
                     <h2 className="text-2xl font-bold text-[#1D2150] mb-6">
                         Questions About Maitama Gardens Estate
                     </h2>
@@ -129,7 +130,7 @@ const Faq = () => {
                 value={formData.firstName}
                 onChange={handleChange}
                 required
-                className="w-full p-3 rounded-lg bg-green-500 text-white placeholder-white"
+                className="w-full p-3 rounded-lg bg-[#91D592] text-white placeholder-white"
               />
               <input
                 type="text"
@@ -138,7 +139,7 @@ const Faq = () => {
                 value={formData.lastName}
                 onChange={handleChange}
                 required
-                className="w-full p-3 rounded-lg bg-green-500 text-white placeholder-white"
+                className="w-full p-3 rounded-lg bg-[#91D592] text-white placeholder-white"
               />
             </div>
             <input
@@ -148,7 +149,7 @@ const Faq = () => {
               value={formData.email}
               onChange={handleChange}
               required
-              className="w-full p-3 rounded-lg bg-green-500 text-white placeholder-white"
+              className="w-full p-3 rounded-lg bg-[#91D592] text-white placeholder-white"
             />
             <textarea
               name="message"
@@ -157,11 +158,11 @@ const Faq = () => {
               value={formData.message}
               onChange={handleChange}
               required
-              className="w-full p-3 rounded-lg bg-green-500 text-white placeholder-white"
+              className="w-full p-3 rounded-lg bg-[#91D592] text-white placeholder-white"
             ></textarea>
             <button
               type="submit"
-              className="bg-[#1D2150] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition"
+              className="bg-[#1D2150] text-white px-6 py-3 rounded-lg font-semibold hover:bg-blue-900 transition  mx-auto"
             >
               Submit
             </button>
@@ -178,7 +179,9 @@ const Faq = () => {
         </div>
       </div>
     </section>
-
+    <div className="w-[80vw] mx-auto z-10 mb-16">
+<Banner />
+</div>
 
         </div>
     )

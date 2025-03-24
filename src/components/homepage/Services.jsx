@@ -4,7 +4,7 @@ import consultancyImage from "../../assets/Frame78.png"; // Update with correct 
 
 const OurServices = () => {
   return (
-    <section className=" lg:px-20 h-[100vh] flex flex-col w-[100vw] justify-center px-32 bg-[#F8FAFC] text-center">
+    <section className=" md:px-20 md:h-[100vh] flex flex-col w-[100vw] justify-center px-8 bg-[#F8FAFC] text-center">
       {/* Title */}
       <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
         Our Services
