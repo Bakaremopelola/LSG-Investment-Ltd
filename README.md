@@ -1,12 +1,59 @@
-# React + Vite
+# LSG Investment Ltd.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## About
+**LSG Investment Ltd.** is a premier real estate company specializing in property investment, buying, selling, and leasing. Our platform simplifies the real estate journey with verified land deals, transparent processes, and dedicated support to ensure stress-free transactions and secure investments.
 
-Currently, two official plugins are available:
+### Website
+[www.lsginvestmentltd.com.ng](https://www.lsginvestmentltd.com.ng)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
+- **Property Listings**: Browse verified properties for sale and rent.
+- **Investment Opportunities**: Secure real estate investment deals.
+- **Transparent Transactions**: Ensuring a seamless and reliable experience.
+- **Dedicated Support**: Get assistance from real estate professionals.
+- **User-Friendly Interface**: Responsive and easy-to-use design.
 
-## Expanding the ESLint configuration
+## Technologies Used
+- **Frontend**: React, Tailwind CSS
+- **Backend**: Node.js, Express.js, MongoDB
+- **Authentication**: JWT Authentication
+- **Payments**: Integrated with Paystack for secure transactions
+- **Hosting**: Deployed on Vercel
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Installation & Setup
+### Prerequisites
+Ensure you have the following installed:
+- Node.js (v16 or later)
+- npm or yarn
+
+### Clone the Repository
+```sh
+git clone https://github.com/your-username/lsg-investment.git
+cd lsg-investment
+```
+
+### Install Dependencies
+```sh
+npm install  # or yarn install
+```
+
+### Run the Development Server
+```sh
+npm run dev  # or yarn dev
+```
+The app will be available at `http://localhost:3000`.
+
+## Deployment
+For production deployment, use Vercel:
+```sh
+vercel deploy
+```
+
+## Contributing
+We welcome contributions! Feel free to submit issues or pull requests.
+
+## Contact
+For inquiries, please visit our website: [www.lsginvestmentltd.com.ng](https://www.lsginvestmentltd.com.ng) or email us at **support@lsginvestmentltd.com.ng**.
+
+ figma file ::::
+ https://www.figma.com/design/17Yd8rvOZcT78qPr37XsER/LSG-Website-Redesign?node-id=0-1&p=f&t=kmqkEEIKmg7e0iSt-0
