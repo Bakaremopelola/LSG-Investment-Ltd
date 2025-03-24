@@ -15,10 +15,10 @@ const AboutSection = () => {
     <section className="px-6 lg:px-20 py-16 gap-0 bg-white">
       {/* Title */}
       <div className="text-center mb-10">
-        <h2 className="text-3xl lg:text-4xl font-bold text-gray-900">
+        <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
           Who We Are
         </h2>
-        <p className="mt-3 text-gray-600 text-2xl px-16 mx-auto">
+        <p className="mt-3 text-gray-600 text-2xl px-4 lg:px-16 mx-auto">
           LSG Investment Limited is a trusted real estate company dedicated to
           revolutionizing property ownership in Nigeria. With over a decade of
           expertise, we provide innovative solutions in real estate sales,
@@ -28,9 +28,9 @@ const AboutSection = () => {
       </div>
 
       {/* Content Section */}
-      <div className="flex sm:flex-col md:flex-row px-16 gap-0 items-center m-0 justify-center">
+      <div className="flex flex-col md:flex-row px-16 md:gap-0 items-center gap-4 m-0 justify-center">
         {/* Left: Image */}
-        <div className=" h-[600px] w-[20vw] rounded-lg overflow-hidden">
+        <div className=" lg:h-[600px] lg:w-[20vw] rounded-lg overflow-hidden">
           <img
             src={houseImage}
             alt="House"
@@ -39,7 +39,7 @@ const AboutSection = () => {
         </div>
 
 
-        <div className="bg-[#1D2150] text-white px-10 py-12 lg:px-20 w-[35vw] lg:w-[25vw] h-[700px] shadow-lg">
+        <div className="bg-[#1D2150] text-white px-6 md:px-10 w-[80vw] py-12 lg:px-20 md:w-[35vw] lg:w-[25vw] md:h-[700px] shadow-lg">
           <h3 className="text-xl lg:text-4xl font-semibold mb-3">About Us</h3>
           <p className=" text- lg:text-[1.3em] leading-relaxed">
             Founded in 2024 by seasoned engineers and builders, LSG Investment
@@ -56,19 +56,19 @@ const AboutSection = () => {
         </div>
 
         {/* Why Choose Us */}
-        <div className="flex flex-col w-[40vw] h-[700px] px-10 lg:px-20 py-12 shadow-2xl ">
+        <div className="px-6 md:px-10 w-[80vw] py-12 lg:px-20 md:w-[40vw] lg:w-[30vw] md:h-[700px] shadow-lg ">
           <h3 className="text-4xl text-center mb-8 font-semibold text-gray-900 ">
             Why Choose Us
           </h3>
           <ul className="space-y-3 text-gray-700 lg:text-2xl">
-            <li className="flex gap-16 justify-start">
+            <li className="flex gap-6 md:gap-16 justify-start">
               <CgCommunity size={100} />
               <div>
                 <strong className="text-[#1D2150]">Client-Centric Values:</strong>
                 <p> Your satisfaction comes first. We exceed expectations to build lasting relationships.</p>
               </div>
             </li>
-            <li className="flex gap-16 justify-start">
+            <li className="flex gap-6 md:gap-16 justify-start">
               <LucideUserRoundCheck size={50} />
               <div>
                 <strong className="text-[#1D2150]">Personalised Approach:</strong>
@@ -76,14 +76,14 @@ const AboutSection = () => {
               </div>
 
             </li>
-            <li className="flex gap-16 justify-start">
+            <li className="flex gap-6 md:gap-16 justify-start">
               <BsCash size={50} />
               <div>
                 <strong className="text-[#1D2150]">Transparency and Trust:</strong>
                 <p> Our processes are open and clear, giving you peace of mind.</p>
               </div>
             </li>
-            <li className="flex gap-16 justify-start">
+            <li className="flex gap-6 md:gap-16 justify-start">
               <FcServices size={50} />
               <div>
                 <strong className="text-[#1D2150]">Comprehensive Services:</strong>

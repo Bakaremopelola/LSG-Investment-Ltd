@@ -44,7 +44,7 @@ const Banners = () => {
   };
 
   return (
-    <section className="w-full lg:w-[80vw] md:w-3xl mx-auto sm:h-auto h-[30vh] flex justify-center px-6 md:px-16 py-6">
+    <section className="w-full lg:w-[80vw] md:w-3xl mx-auto h-auto lg:h-[30vh] flex justify-center px-6 md:px-16 py-6">
       <div className="bg-[#1D2150] text-white rounded-2xl w-full px-6 md:px-8 py-6 flex flex-col md:flex-row items-center justify-between shadow-lg">
         {/* Left Content */}
         <div className="text-center md:text-left">

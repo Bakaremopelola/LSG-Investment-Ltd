@@ -14,7 +14,7 @@ const Contact = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto p-4 h-[70vh] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
+      <div className="container mx-auto p-4 lg:h-[70vh] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
         {/* Left: Contact Info */}
         <div className="w-full md:w-1/3 bg-[#1D2150] text-white p-8 px-12 rounded-l-lg">
           <h2 className="text-4xl font-normal mb-6">Our Contact Info:</h2>

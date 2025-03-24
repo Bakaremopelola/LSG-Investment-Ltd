@@ -20,20 +20,20 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-full h-[80vh] flex items-center px-8 lg:px-16 bg-cover bg-center"
+      className="relative w-full h-[90vh] lg:h-[80vh] flex items-center px-8 lg:px-16 bg-cover bg-center"
      
     >
-      {/* Overlay for dark effect */}
+     
       <div className="absolute inset-0  bg-opacity-40 bg-no-repeat scale-x-[-1] bg-cover "  style={{ backgroundImage: `url(${bg})` }} ></div>
 
       {/* Content */}
-      <div className="relative z-10 p-32 text-[#1D2150] w-[50vw]">
-        <h1 className="text-4xl lg:text-6xl text-[#1D2150] font-bold">
+      <div className="relative z-8 md:p-32 sm:bg-white/10 bg-white/10 backdrop-blur-xs border border-white/20 lg:text-[#1D2150] md:w-[50vw] px-10 py-12 md:px-8 mx-auto md:m-0">
+        <h1 className="text-2xl md:text-4xl lg:text-6xl text-[#1D2150] font-bold">
           Ready to <span className="text-green-500">Buy</span>,{" "}
           <span className="text-green-500">Sell</span>, or{" "}
           <span className="text-green-500">Invest</span>?
         </h1>
-        <p className="mt-4 text-[1.3em]">
+        <p className="mt-4 text-sm md:text-[1.3em]">
           We simplify your real estate journey with verified land deals,
           transparent processes, and dedicated support ensuring stress-free
           transactions and secure investments tailored to your needs.

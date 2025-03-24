@@ -39,13 +39,18 @@
 
 
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Menu, X } from "lucide-react";
 import logo from "../../assets/logowhite.png";
 import Button from "../Button";
 
 const Navbar = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const naviagte = useNavigate();
+
+  const handleClick = () => {
+    naviagte("/contact");
+  };
 
   return (
     <nav className="bg-[#1D2150] h-[10vh] w-full sticky top-0 z-10 flex justify-between items-center px-6">
@@ -72,7 +77,7 @@ const Navbar = () => {
           textColor="text-black"
           borderRadius="rounded-lg"
           hoverEffect="hover:bg-purple-600"
-          onClick={() => alert("Schedule a call clicked!")}
+          onClick={handleClick}
         >
           Schedule a call
         </Button>
@@ -100,7 +105,7 @@ const Navbar = () => {
     <button
       className="bg-white text-black px-6 py-3 rounded-lg hover:bg-purple-600 transition duration-300"
       onClick={() => {
-        alert("Schedule a call clicked!");
+       handleClick
         setIsMobileMenuOpen(false);
       }}
     >
