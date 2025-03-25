@@ -1,11 +1,60 @@
-import React from "react";
+import { useState } from "react";
 import { MapPin, Mail, Linkedin, Facebook, Instagram } from "lucide-react";
-import ex from "../assets/Frame66.png"
+import ex from "../assets/Frame66.png";
 import Banner from "../components/homepage/Banner";
 
 
-
 const BuildingQuot = () => {
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    plots: "",
+    purpose: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    try {
+      const response = await fetch("http://localhost:5000/api/quotes", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          name: `${formData.firstName} ${formData.lastName}`,
+          phone: formData.phone,
+          email: formData.email,
+          plots: formData.plots,
+          purpose: formData.purpose,
+        }),
+      });
+  
+      if (!response.ok) {
+        throw new Error("Failed to submit quote request");
+      }
+  
+      alert("Quote request sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        plots: "",
+        purpose: "",
+      });
+    } catch (error) {
+      alert("Error submitting quote request.");
+      console.error(error);
+    }
+  };
+  
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Banner Section */}
@@ -65,22 +114,21 @@ const BuildingQuot = () => {
             Input Details to Get a Free Building Quote.
           </h2>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="text" placeholder="First name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
-              <input type="text" placeholder="Last name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
+              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
+              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="tel" placeholder="Phone*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
-              <input type="email" placeholder="Email*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
+              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
+              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
             </div>
 
-            <input type="text" placeholder="Number of plots" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
+            <input type="text" name="plots" value={formData.plots} onChange={handleChange} placeholder="Number of plots" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
+            <textarea name="purpose" value={formData.purpose} onChange={handleChange} placeholder="Purpose of purchase" className="p-3 bg-[#F2FAF6] rounded-md w-full h-36" required></textarea>
 
-            <textarea placeholder="Purpose of purchase" className="p-3 bg-[#F2FAF6] rounded-md w-full h-36"></textarea>
-
-            <button className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center  md:w-auto">
+            <button type="submit" className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center md:w-auto">
               Get Quote
             </button>
           </form>

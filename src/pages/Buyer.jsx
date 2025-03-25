@@ -1,4 +1,4 @@
-import React from "react";
+import { useState } from "react";
 import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import ex from "../assets/Frame68.png"
 import Banner from "../components/homepage/Banner";
@@ -6,6 +6,66 @@ import Banner from "../components/homepage/Banner";
 
 
 const Buyer = () => {
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    plots: "",
+    purpose: "",
+  });
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    
+    const payload = {
+      name: `${formData.firstName} ${formData.lastName}`,
+      phone: formData.phone,
+      email: formData.email,
+      plots: formData.plots,
+      purpose: formData.purpose,
+    };
+  
+    console.log("Sending Payload:", payload);
+  
+    try {
+      const response = await fetch("http://localhost:5000/api/buyers", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+  
+      const result = await response.json();
+      console.log("Server Response:", result);
+  
+      if (!response.ok) {
+        throw new Error(result.message || "Failed to submit buying request");
+      }
+  
+      alert("Quote request sent successfully!");
+      setFormData({
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        plots: "",
+        purpose: "",
+      });
+    } catch (error) {
+      alert("Error submitting quote request.");
+      console.error(error);
+    }
+  };
+
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Banner Section */}
@@ -63,23 +123,72 @@ const Buyer = () => {
         <div className="w-full md:w-2/3 p-8">
           <h2 className="text-2xl font-bold text-gray-800 mb-6">Input Details to Get Started as Investor</h2>
 
-          <form className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="text" placeholder="First name*" className="p-3 border rounded-md w-full" />
-              <input type="text" placeholder="Last name*" className="p-3 border rounded-md w-full" />
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First name*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last name*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="tel" placeholder="Phone*" className="p-3 border rounded-md w-full" />
-              <input type="email" placeholder="Email*" className="p-3 border rounded-md w-full" />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
             </div>
 
-            <input type="text" placeholder="Number of plots" className="p-3 border rounded-md w-full" />
+            <input
+              type="text"
+              name="plots"
+              value={formData.plots}
+              onChange={handleChange}
+              placeholder="Number of plots"
+              className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+              required
+            />
+            <textarea
+              name="purpose"
+              value={formData.purpose}
+              onChange={handleChange}
+              placeholder="Purpose of purchase"
+              className="p-3 bg-[#F2FAF6] rounded-md w-full h-36"
+              required
+            ></textarea>
 
-            <textarea placeholder="Purpose of purchase" className="p-3 border rounded-md w-full h-24"></textarea>
-
-            <button className="bg-blue-900 text-white py-3 px-6 rounded-lg w-full md:w-auto">
-              Submit
+            <button
+              type="submit"
+              className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center md:w-auto"
+            >
+              submit
             </button>
           </form>
         </div>
