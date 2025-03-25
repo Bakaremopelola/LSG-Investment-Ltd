@@ -8,6 +8,11 @@ import Buyer from "./pages/Buyer";
 import BuildingQuot from "./pages/BuildingQuote";
 import Faq from "./pages/Faq";
 import OurService from "./pages/OurServices";
+import AdminLayout from "./layout/AdminLayout";
+import Dashboard from "./pages/admin/dashboard/Dashboard";
+import Quotations from "./pages/admin/dashboard/Quotations";
+import Buyers from "./pages/admin/dashboard/Buyers";
+import Realtors from "./pages/admin/dashboard/Realtors";
 
 const router = createBrowserRouter([
     {
@@ -45,6 +50,28 @@ const router = createBrowserRouter([
             {
                 path: "/faq",
                 element:<Faq/>
+            },
+            {
+                path: "/admin",
+                element: <AdminLayout/>,
+                children: [
+                   {
+                    index: true,
+                    element: <Dashboard/>
+                   },
+                   {
+                    path: "quote",
+                    element:<Quotations/>
+                   },
+                   {
+                    path: "buyers",
+                    element: <Buyers/>
+                   },
+                   {
+                    path: "realtor",
+                    element: <Realtors/>
+                   }
+                ]
             }
         
         ],
