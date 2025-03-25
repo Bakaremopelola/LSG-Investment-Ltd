@@ -1,11 +1,53 @@
-import React from "react";
+import React, { useState } from "react";
+import emailjs from "@emailjs/browser";
 import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
-import ex from '../assets/Frame14.png'
+import ex from "../assets/Frame14.png";
 import Banner from "../components/homepage/Banner";
 
 
 
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    subject: "",
+    message: "",
+  });
+
+  const [loading, setLoading] = useState(false);
+  const [success, setSuccess] = useState(null);
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    try {
+      await emailjs.send(
+        "your_service_id", 
+        "your_template_id", 
+        {
+          name: formData.name,
+          email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+        },
+        "your_public_key" 
+      );
+
+      setSuccess("Message sent successfully!");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    } catch (error) {
+      setSuccess("Failed to send message. Try again later.");
+    }
+
+    setLoading(false);
+  };
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Hero Section */}
@@ -61,20 +103,60 @@ const Contact = () => {
             We would love to hear from you!
           </h2>
 
-          <form className="space-y-4">
+          <form className="space-y-4" onSubmit={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="text" placeholder="Full name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
-              <input type="email" placeholder="Email*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Full name*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
             </div>
 
-            <input type="text" placeholder="Subject" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" />
+            <input
+              type="text"
+              name="subject"
+              value={formData.subject}
+              onChange={handleChange}
+              placeholder="Subject"
+              className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+            />
 
-            <textarea placeholder="Your Message" className="p-3 bg-[#F2FAF6] rounded-md w-full h-36"></textarea>
+            <textarea
+              name="message"
+              value={formData.message}
+              onChange={handleChange}
+              placeholder="Your Message"
+              className="p-3 bg-[#F2FAF6] rounded-md w-full h-36"
+              required
+            ></textarea>
 
-            <button className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center  md:w-auto">
-              Send
+            <button
+              type="submit"
+              className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center md:w-auto"
+              disabled={loading}
+            >
+              {loading ? "Sending..." : "Send"}
             </button>
           </form>
+
+          {success && (
+            <p className={`mt-4 text-center ${success.includes("Failed") ? "text-red-600" : "text-green-600"}`}>
+              {success}
+            </p>
+          )}
         </div>
       </div>
       <div className="w-[80vw] mx-auto z-10 mb-16">
