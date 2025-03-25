@@ -35,7 +35,7 @@ const Buyer = () => {
     console.log("Sending Payload:", payload);
   
     try {
-      const response = await fetch("http://localhost:5000/api/buyers", {
+      const response = await fetch("https://lsg-backend.onrender.com/api/buyers", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

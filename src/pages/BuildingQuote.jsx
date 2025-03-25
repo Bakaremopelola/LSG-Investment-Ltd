@@ -21,7 +21,7 @@ const BuildingQuot = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:5000/api/quotes", {
+      const response = await fetch("https://lsg-backend.onrender.com/api/quotes", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
