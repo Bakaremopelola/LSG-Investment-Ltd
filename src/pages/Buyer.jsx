@@ -73,7 +73,7 @@ const Buyer = () => {
         <img
           src={ex}
           alt="Investor Banner"
-          className="mx-auto"
+          className="mx-auto h-[25vh] lg:h-auto"
         />
       </div>
 

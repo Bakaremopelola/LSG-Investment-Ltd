@@ -50,7 +50,7 @@ const Faq = () => {
         <div className="min-h-screen bg-gray-100 flex flex-col">
             {/* Hero Section */}
             <div className="w-full bg-white text-center ">
-                <img className="w-[100vw]" src={ex} alt="" />
+                <img className="w-[100vw] h-[25vh] lg:h-auto" src={ex} alt="" />
             </div>
 
             <section className="bg-gray-100 py-12 px-4">

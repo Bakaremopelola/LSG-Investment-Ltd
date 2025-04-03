@@ -11,7 +11,7 @@ const OurService = () => {
           <div className="min-h-screen bg-gray-100 flex flex-col">
               {/* Hero Section */}
               <div className="w-full bg-white text-center ">
-               <img src={ex} className='w-[100vw]' alt="" />
+               <img src={ex} className='w-[100vw] h-[25vh] lg:h-auto' alt="" />
               </div>
               <div className="min-h-screen bg-gray-100 flex flex-col">
       
@@ -19,7 +19,7 @@ const OurService = () => {
             <HowItWorks/>
             <WhyChooseUs/>
             <Testimonials/>
-            <div className="w-[80vw] mx-auto z-10 mb-16">
+            <div className=" w-[90vw] lg:w-[80vw] mx-auto z-10 mb-16">
 <Banner />
 </div>
             </div>

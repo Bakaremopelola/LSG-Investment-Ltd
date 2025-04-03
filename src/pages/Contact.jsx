@@ -52,7 +52,7 @@ const Contact = () => {
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Hero Section */}
       <div className="w-full bg-white text-center ">
-        <img src={ex} className="w-[100vw]" alt="" />
+        <img src={ex} className="w-[100vw] h-[25vh] lg:h-auto" alt="" />
       </div>
 
       {/* Main Content */}

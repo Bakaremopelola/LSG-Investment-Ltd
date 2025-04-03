@@ -66,7 +66,7 @@ const About = () => {
      <div className=" bg-gray-100 w-[100vw] overflow-x-hidden p-0 m-0 flex flex-col">
           {/* Hero Section */}
           <div className="w-[100vw] bg-white text-center ">
-           <img src={ea} alt=""className='w-[100vw]'/>
+           <img src={ea} alt=""className='w-[100vw] h-[25vh] lg:h-auto' />
           </div>
 
           <section className="bg-gray-100 py-12 px-4">

@@ -62,7 +62,7 @@ const BuildingQuot = () => {
         <img
           src={ex} 
           alt="Pay Zero!"
-          className="mx-auto w-full"
+          className="mx-auto w-full h-[25vh] lg:h-auto"
         />
       </div>
 
