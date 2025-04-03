@@ -22,11 +22,11 @@ const testimonials = [
         </h2>
   
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-32 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative"
+              className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative h-[40vh] lg:h-auto"
             >
               {/* Stars */}
               <div className="flex justify-end mb-3">
@@ -38,11 +38,11 @@ const testimonials = [
               </div>
   
               {/* Testimonial Text */}
-              <p className="text-sm md:text-xl leading-relaxed">{testimonial.text}</p>
+              <p className="text-3xl md:text-xl leading-relaxed">{testimonial.text}</p>
   
               {/* Profile Placeholder */}
-              <div className="absolute -bottom-5 md:-bottom-12 left-1/4 transform -translate-x-1/2">
-                <div className="w-12 h-12 md:w-24 md:h-24 bg-gray-300 rounded-full"></div>
+              <div className="absolute -bottom-12 md:-bottom-12 left-1/4 transform -translate-x-1/2">
+                <div className="w-32 h-32 md:w-24 md:h-24 bg-gray-300 rounded-full"></div>
               </div>
   
               {/* Name */}

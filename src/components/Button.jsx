@@ -9,7 +9,7 @@ const Button = ({
   borderRadius = 'rounded', // Default border radius
   hoverEffect = 'hover:bg-blue-600', // Default hover effect
   onClick, // Click handler
-  className = '', // Additional custom classes
+  className = '', 
 }) => {
   return (
     <button

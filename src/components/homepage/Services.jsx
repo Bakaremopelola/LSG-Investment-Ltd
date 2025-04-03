@@ -1,15 +1,16 @@
 import salesImage from "../../assets/Frame76.png"; // Update with correct path
 import developmentImage from "../../assets/Frame77.png"; // Update with correct path
 import consultancyImage from "../../assets/Frame78.png"; // Update with correct path
+import Button from "../Button";
 
 const OurServices = () => {
   return (
-    <section className=" md:px-20 md:h-[100vh] flex flex-col w-[100vw] justify-center px-8 bg-[#F8FAFC] text-center">
+    <section className=" md:px-20 lg:h-[100vh] flex flex-col w-[100vw] justify-center px-8 bg-[#F8FAFC] text-center">
       {/* Title */}
-      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+      <h2 className=" font-light text-4xl lg:font-bold text-gray-900 mb-4">
         Our Services
       </h2>
-      <p className="text-gray-600 max-w-3xl mx-auto mb-10">
+      <p className="text-gray-600 max-w-3xl mx-auto mb-10 text-2xl">
         At LSG Investment Limited, we offer comprehensive real estate solutions
         designed to empower our clients with the knowledge and support they need
         to achieve their property goals with confidence.
@@ -22,9 +23,9 @@ const OurServices = () => {
           <img
             src={salesImage}
             alt="Sales"
-            className="w-full h-[250px] object-cover rounded-lg"
+            className="w-full h-[600px] lg:h-[250px]  object-cover rounded-lg"
           />
-          <h3 className="text-2xl font-semibold text-gray-900 mt-4">Sales</h3>
+     <h3 className="lg:text-2xl text-4xl font-light lg:font-semibold text-gray-900 mt-4">Sales</h3>
         </div>
 
         {/* Development */}
@@ -32,9 +33,9 @@ const OurServices = () => {
           <img
             src={developmentImage}
             alt="Development"
-            className="w-full h-[250px] object-cover rounded-lg"
+            className="w-full h-[600px] lg:h-[250px] object-cover rounded-lg"
           />
-          <h3 className="text-2xl font-semibold text-gray-900 mt-4">
+        <h3 className="lg:text-2xl text-4xl font-light lg:font-semibold text-gray-900 mt-4">
             Development
           </h3>
         </div>
@@ -44,12 +45,13 @@ const OurServices = () => {
           <img
             src={consultancyImage}
             alt="Consultancy"
-            className="w-full h-[250px] object-cover rounded-lg"
+            className="w-full h-[600px] lg:h-[250px]  object-cover rounded-lg"
           />
-          <h3 className="text-2xl font-semibold text-gray-900 mt-4">
+          <h3 className="lg:text-2xl text-4xl font-light lg:font-semibold text-gray-900 mt-4">
             Consultancy
           </h3>
         </div>
+        {/* <Button width="40vw" className="">See more</Button> */}
       </div>
     </section>
   );
