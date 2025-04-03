@@ -15,16 +15,16 @@ const HowItWorks = () => {
         offering comprehensive solutions to meet your real estate needs.
       </p>
 
-      <div className="flex justify-center gap-6 mt-10 flex-wrap">
+      <div className="flex justify-center gap-6 mt-10 flex-wrap lg:flex-rows flex-col">
         {steps.map((step) => (
           <div key={step.id} className="relative flex flex-col items-center">
-            <div className="w-48 h-48 bg-green-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white text-center p-4">
+            <div className="lg:w-48 lg:h-48 w-96 h-96 bg-green-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white text-center p-4">
               <div>
-                <h3 className="text-lg font-semibold">{step.title}</h3>
-                <p className="text-sm mt-2">{step.description}</p>
+                <h3 className="text-3xl md:text-lg font-semibold">{step.title}</h3>
+                <p className="text-2xl lg:text-sm mt-2">{step.description}</p>
               </div>
             </div>
-            <div className="absolute -top-3 right-5 bg-white border-2 border-gray-900 w-10 h-10 flex items-center justify-center rounded-full text-gray-900 font-bold text-lg">
+            <div className="absolute lg:top-3 -translate-x-16 lg:right-5 bg-white border-2 border-gray-900 w-10 h-10 flex items-center justify-center rounded-full text-gray-900 font-bold text-lg">
               {step.id}
             </div>
           </div>

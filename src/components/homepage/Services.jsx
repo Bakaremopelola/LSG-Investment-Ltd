@@ -1,7 +1,7 @@
 import salesImage from "../../assets/Frame76.png"; // Update with correct path
 import developmentImage from "../../assets/Frame77.png"; // Update with correct path
 import consultancyImage from "../../assets/Frame78.png"; // Update with correct path
-import Button from "../Button";
+
 
 const OurServices = () => {
   return (

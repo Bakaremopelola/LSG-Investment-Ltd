@@ -104,12 +104,12 @@ const About = () => {
           Choose us for our transparency, expertise, and personalized approach to real estate.
         </p>
 
-        <div className="bg-[#1D2150] rounded-xl p-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="bg-[#1D2150] rounded-xl p-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-64 lg:gap-6">
           {values.map((value, index) => (
             <div key={index} className="flex flex-col items-center text-center text-white">
-              <div className="bg-white text-black p-3 rounded-full flex justify-center items-center mb-4">{value.icon}</div>
-              <h3 className="text-lg font-semibold">{value.title}</h3>
-              <p className="text-sm">{value.description}</p>
+              <div className="bg-white  text-black p-3 rounded-full flex justify-center items-center mb-4">{value.icon}</div>
+              <h3 className="text-4xl lg:text-lg font-semibold">{value.title}</h3>
+              <p className="text-2xl lg:text-sm">{value.description}</p>
             </div>
           ))}
         </div>
@@ -122,7 +122,7 @@ const About = () => {
 <Testimonials/>
 <MeetTeam/>
 
-<div className="w-[80vw] mx-auto z-10 mb-16">
+<div className="w-[90vw] lg:*:w-[80vw] mx-auto z-10 mb-16">
 <Banner />
 </div>
 

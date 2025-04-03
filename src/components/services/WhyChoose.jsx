@@ -38,10 +38,10 @@ const WhyChooseUs = () => {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10 max-w-4xl mx-auto">
         {features.map((feature) => (
-          <div key={feature.id} className="bg-[#1D2150] p-6 rounded-xl text-white flex flex-col items-center shadow-md">
+          <div key={feature.id} className="bg-[#1D2150] p-6 rounded-xl text-white flex flex-col items-center justify-center shadow-md h-[40vh] lg:h-auto ">
             <div className="bg-white p-4 rounded-full mb-4">{feature.icon}</div>
-            <h3 className="text-lg font-semibold">{feature.title}</h3>
-            <p className="text-sm mt-2 text-center">{feature.description}</p>
+            <h3 className="lg:text-lg text-2xl font-semibold">{feature.title}</h3>
+            <p className="text-2xl lg:text-sm mt-2 text-center">{feature.description}</p>
           </div>
         ))}
       </div>
