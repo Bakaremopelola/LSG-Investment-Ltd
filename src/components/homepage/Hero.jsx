@@ -38,7 +38,7 @@ const Hero = () => {
           <span className="text-green-500">Sell</span>, or{" "}
           <span className="text-green-500">Invest</span>?
         </h1>
-        <p className="mt-4 text-sm lg:text-[1.3em] w-[40vw] lg:w-auto ">
+        <p className="mt-4 text-sm lg:text-[1.3em] w-[45vw] lg:w-auto ">
           We simplify your real estate journey with verified land deals,
           transparent processes, and dedicated support ensuring stress-free
           transactions and secure investments tailored to your needs.
