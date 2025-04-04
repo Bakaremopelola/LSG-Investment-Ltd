@@ -79,9 +79,9 @@ const Realtor = () => {
       </div>
 
       {/* Main Content */}
-      <div className="container mx-auto p-4 lg:h-[70vh] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
+      <div className="container mx-auto  p-4 lg:h-[80vh] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
         {/* Left: Contact Info */}
-        <div className="w-full md:w-1/3 bg-[#1D2150] text-white p-8 px-12 rounded-l-lg">
+        <div className="w-full  flex-col md:w-1/3 bg-[#1D2150] text-white p-8 px-12 rounded-l-lg hidden md:flex">
           <h2 className="text-4xl font-normal mb-6">Our Contact Info:</h2>
           <p className="mb-12">
             Kindly reach out to us on any of our communication channels below.
@@ -178,7 +178,7 @@ const Realtor = () => {
 
         </div>
       </div>
-      <div className="w-[80vw] mx-auto z-10 mb-16">
+      <div className="w-[90vw] lg:w-[80vw] mx-auto z-10 mb-16">
         <Banner />
       </div>
     </div>

@@ -179,7 +179,7 @@ const Faq = () => {
         </div>
       </div>
     </section>
-    <div className="w-[80vw] mx-auto z-10 mb-16">
+    <div className="w-[90vw lg:w-[80vw] mx-auto z-10 mb-16">
 <Banner />
 </div>
 
