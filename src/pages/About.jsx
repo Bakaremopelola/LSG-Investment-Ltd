@@ -41,7 +41,7 @@ const About = () => {
 
   const values = [
     {
-      icon: <FaStar size={40} className="text-white" />,
+      icon: <FaStar stroke='black' size={40} className="text-white" />,
       title: "Expertise",
       description: "We bring unmatched knowledge and skills to every project, ensuring top-quality results.",
     },

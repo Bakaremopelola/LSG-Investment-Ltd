@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
 import { useNavigate } from "react-router-dom";
@@ -60,27 +59,31 @@ const FaqSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="border rounded-lg bg-green-500 text-white shadow-md"
+            className="rounded-lg bg-green-500 text-white shadow-md overflow-hidden"
           >
             {/* Question */}
             <button
-              className="w-full flex justify-between items-center p-4 text-lg font-semibold pb-4 border-b-black"
+              className="w-full flex justify-between items-center p-4 text-lg font-semibold"
               onClick={() => toggleFAQ(index)}
             >
-              {faq.question}
+           <span className="relative p-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
+  {faq.question}
+</span>
+
               {openIndex === index ? (
-               <div className="w-6 h-6 p-4 bg-blue-900 text-white rounded-full flex justify-center items-center">
-               <ChevronUp className="w-6 h-6 text-white" stroke="white" />
-             </div>
-             
+                <div className="w-8 h-8 bg-[#1D2150] flex justify-center items-center rounded-full">
+                  <ChevronUp className="w-5 h-5 text-white" stroke="white" />
+                </div>
               ) : (
-                <ChevronDown className="w-6 h-6" />
+                <div className="w-8 h-8 bg-[#1D2150] text-green-500 flex justify-center items-center rounded-full">
+                  <ChevronDown className="w-5 h-5 text-white" stroke="white" />
+                </div>
               )}
             </button>
 
             {/* Answer */}
             {openIndex === index && (
-              <div className="p-4 bg-green-600 text-white text-left text-sm">
+              <div className="p-8 bg-green-600 text-white text-left text-sm">
                 {faq.answer}
               </div>
             )}

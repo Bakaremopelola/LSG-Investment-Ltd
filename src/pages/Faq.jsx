@@ -14,12 +14,28 @@ const faqs = [
 ];
 
 const estateFAQs = [
-    { question: "Where is the property located?", answer: "The property is located in Maitama Gardens Estate, Abuja." },
-    { question: "What are the nearest landmarks to the property?", answer: "The nearest landmarks include XYZ Mall, ABC School, and DEF Hospital." },
-    { question: "What types of units are available in the property?", answer: "The property offers 2-bedroom, 3-bedroom, and 4-bedroom units." },
-    { question: "What amenities are available in the property?", answer: "Amenities include 24/7 security, a swimming pool, a gym, and a children's play area." },
-    { question: "Is the property easily accessible by public transportation?", answer: "Yes, the estate is well connected with multiple transport options nearby." },
+  { 
+      question: "Where is the property located?", 
+      answer: "Our property is situated in Agbowa, Ikorodu, a boundary community between Lagos and Ogun."
+  },
+  { 
+      question: "What are the nearest landmarks to the property?", 
+      answer: "The property is located just an hour from Epe and Ibeju-Lekki and surrounded by key landmarks like LASUSTECH, Imota Rice Mill, and Caleb University."
+  },
+  { 
+      question: "What types of units are available in the property?", 
+      answer: "We offer 300 sqm, 500 sqm, and 1-acre plots."
+  },
+  { 
+      question: "What amenities are available in the property?", 
+      answer: "Our property promises high appreciation value, 100% dry land, excellent road networks, power supply, and top-notch security."
+  },
+  { 
+      question: "Is the property easily accessible by public transportation?", 
+      answer: "Yes."
+  }
 ];
+
 
 
 
