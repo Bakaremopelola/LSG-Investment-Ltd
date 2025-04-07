@@ -6,11 +6,26 @@ import Banner from "../components/homepage/Banner";
 
 
 const faqs = [
-    "Is the land free from any government acquisition or claim?",
-    "What documents will I receive after full payment?",
-    "Are there additional fees I should be aware of?",
-    "Do commercial and corner piece plots cost extra?",
-    "When will my plot be allocated?",
+    {
+      question:"Is the land free from any government acquisition or claim?",
+      answer: "Yes, it's free from all forms of government acquisition or claims."
+    },
+    {
+      question:"What documents will I receive after full payment?",
+      answer: "You will receive the following documents : Receipts, Contract of Sales, Deep of Assignment, and Registered Survey"
+    },
+  {
+    question: "Are there additional fees I should be aware of?",
+    answer:"No, there are no addtional payments; its an all exclusive payment",
+  },
+    {
+      question:"Do commercial and corner piece plots cost extra?",
+      answer: "No, the purpose of purchase does not affect the cost of the land",
+    }, 
+   {
+    question:"When will my plot be allocated?",
+    answer:"Instant allocation once deposit patment is made" ,
+   }
 ];
 
 const estateFAQs = [
@@ -74,13 +89,15 @@ const Faq = () => {
                     <h2 className="text-2xl font-bold text-[#1D2150] mb-6">General Questions</h2>
 
                     <div className="space-y-4">
-                        {faqs.map((question, index) => (
+                    {faqs.map((item, index) => (
                             <div key={index} className="bg-green-500 rounded-lg shadow-md">
                                 <button
                                     onClick={() => toggleAccordion(index)}
                                     className="w-full flex justify-between items-center p-4 text-white font-semibold"
                                 >
-                                    {question}
+                                     <span className="relative px-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
+                                     {item.question}
+                                     </span>
                                     <FaChevronDown
                                         className={`transform transition-transform ${openIndex === index ? "rotate-180" : ""
                                             }`}
@@ -88,7 +105,7 @@ const Faq = () => {
                                 </button>
                                 {openIndex === index && (
                                     <div className="bg-green-200 text-black p-4 text-left">
-                                        Answer content goes here...
+                                        {item.answer}
                                     </div>
                                 )}
                             </div>
@@ -111,7 +128,10 @@ const Faq = () => {
                                     onClick={() => toggleAccordion(index)}
                                     className="w-full flex justify-between items-center p-4 text-white font-semibold"
                                 >
-                                    <span>{index + 1}. {item.question}</span>
+                                    
+                                    <span className="relative px-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
+                                    {index + 1}. {item.question}
+</span>
                                     <FaChevronDown
                                         className={`transform transition-transform ${openIndex === index ? "rotate-180" : ""
                                             }`}

@@ -1,14 +1,19 @@
-import React from 'react'
-import { FaStar, FaFileContract, FaClipboardCheck, FaUsers } from "react-icons/fa";
-import ea from "../assets/Frameb.png"
-import ex from "../assets/Frame184.png"
-import ey from "../assets/Frame183.png"
-import ez from "../assets/Frame185.png"
-import OurServices from '../components/homepage/Services';
-import WhyChooseUs from '../components/services/WhyChoose';
-import Testimonials from '../components/homepage/Testimoinal';
-import MeetTeam from '../components/homepage/MeetTeam';
-import Banner from '../components/homepage/Banner';
+import React from "react";
+import {
+  FaStar,
+  FaFileContract,
+  FaClipboardCheck,
+  FaUsers,
+} from "react-icons/fa";
+import ea from "../assets/Frameb.png";
+import ex from "../assets/Frame184.png";
+import ey from "../assets/Frame183.png";
+import ez from "../assets/Frame185.png";
+import OurServices from "../components/homepage/Services";
+import WhyChooseUs from "../components/services/WhyChoose";
+import Testimonials from "../components/homepage/Testimoinal";
+import MeetTeam from "../components/homepage/MeetTeam";
+import Banner from "../components/homepage/Banner";
 
 const About = () => {
   const sections = [
@@ -38,96 +43,109 @@ const About = () => {
     },
   ];
 
-
   const values = [
     {
-      icon: <FaStar stroke='black' size={40} className="text-white" />,
+      icon: <FaStar stroke="black" size={40} className="text-white" />,
       title: "Expertise",
-      description: "We bring unmatched knowledge and skills to every project, ensuring top-quality results.",
+      description:
+        "We bring unmatched knowledge and skills to every project, ensuring top-quality results.",
     },
     {
       icon: <FaFileContract size={40} className="text-white" />,
       title: "Transparency",
-      description: "Honesty and openness guide all our processes, fostering trust and clarity with our clients.",
+      description:
+        "Honesty and openness guide all our processes, fostering trust and clarity with our clients.",
     },
     {
       icon: <FaClipboardCheck size={40} className="text-white" />,
       title: "Accountability",
-      description: "We take full responsibility for delivering on our promises and commitments.",
+      description:
+        "We take full responsibility for delivering on our promises and commitments.",
     },
     {
       icon: <FaUsers size={40} className="text-white" />,
       title: "Professionalism",
-      description: "Our approach is marked by respect, dedication, and excellence in every interaction.",
+      description:
+        "Our approach is marked by respect, dedication, and excellence in every interaction.",
     },
   ];
-  
+
   return (
-     <div className=" bg-gray-100 w-[100vw] overflow-x-hidden p-0 m-0 flex flex-col">
-          {/* Hero Section */}
-          <div className="w-[100vw] bg-white text-center ">
-           <img src={ea} alt=""className='w-[100vw] h-[25vh] lg:h-auto' />
-          </div>
-
-          <section className="bg-gray-100 py-12 px-4">
-      <div className="md:w-[80vw] mx-auto ">
-        {sections.map((section) => (
-          <div
-            key={section.id}
-            className={`flex flex-col md:flex-row my-16 ${
-              section.reverse ? "md:flex-row-reverse" : ""
-            } items-center gap-16 mb-12 `}
-          >
-            {/* Text Section */}
-            <div className="md:w-1/2 px-8">
-              <h2 className="text-4xl text-center font-bold text-[#1D2150] mb-4">{section.title}</h2>
-              <p className="text-gray-700 text-xl">{section.content}</p>
-            </div>
-
-            {/* Image Section */}
-            <div className="md:w-1/2">
-              <img
-                src={section.image}
-                alt={section.title}
-                className="w-full h-72 object-cover rounded-lg shadow-md"
-              />
-            </div>
-          </div>
-        ))}
+    <div className=" bg-gray-100 w-[100vw] overflow-x-hidden p-0 m-0 flex flex-col">
+      {/* Hero Section */}
+      <div className="w-[100vw] bg-white text-center ">
+        <img src={ea} alt="" className="w-[100vw] h-[25vh] lg:h-auto" />
       </div>
-    </section>
 
-    <section className="bg-gray-100 py-12 ">
-      <div className="w-[100vw] mx-0 text-center">
-        <h2 className="text-5xl font-bold text-[#1D2150] mb-2">Our Values</h2>
-        <p className="text-gray-600 text-2xl mb-8">
-          Choose us for our transparency, expertise, and personalized approach to real estate.
-        </p>
+      <section className="bg-gray-100 py-12 px-4">
+        <div className="md:w-[80vw] mx-auto ">
+          {sections.map((section) => (
+            <div
+              key={section.id}
+              className={`flex flex-col md:flex-row my-16 ${
+                section.reverse ? "md:flex-row-reverse" : ""
+              } items-center gap-16 mb-12 `}
+            >
+              {/* Text Section */}
+              <div className="md:w-1/2 px-8">
+                <h2 className="text-4xl text-center font-bold text-[#1D2150] mb-4">
+                  {section.title}
+                </h2>
+                <p className="text-gray-700 text-xl">{section.content}</p>
+              </div>
 
-        <div className="bg-[#1D2150] rounded-xl p-8 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-64 lg:gap-6">
-          {values.map((value, index) => (
-            <div key={index} className="flex flex-col items-center text-center text-white">
-              <div className="bg-white  text-black p-3 rounded-full flex justify-center items-center mb-4">{value.icon}</div>
-              <h3 className="text-4xl lg:text-lg font-semibold">{value.title}</h3>
-              <p className="text-2xl lg:text-sm">{value.description}</p>
+              {/* Image Section */}
+              <div className="md:w-1/2">
+                <img
+                  src={section.image}
+                  alt={section.title}
+                  className="w-full h-72 object-cover rounded-lg shadow-md"
+                />
+              </div>
             </div>
           ))}
         </div>
+      </section>
+
+      <section className="bg-gray-100 py-12 ">
+        <div className="w-[100vw] mx-0 text-center">
+          <h2 className="text-5xl font-bold text-[#1D2150] mb-2">Our Values</h2>
+          <p className="text-gray-600 text-2xl mb-8">
+            Choose us for our transparency, expertise, and personalized approach
+            to real estate.
+          </p>
+
+          <div className="bg-[#1D2150] rounded-xl p-8 md-p-2 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-64 md:gap-8 lg:gap-6 mx-8 ">
+            {values.map((value, index) => (
+              <div
+                key={index}
+                className="flex flex-col items-center text-center text-white"
+              >
+                <div className="bg-white  text-black p-3 rounded-full flex justify-center items-center mb-4">
+                  <span className="text-black w-20 h-20 " stroke="black">
+                    {value.icon}
+                  </span>
+                </div>
+                <h3 className="text-4xl lg:text-lg font-semibold">
+                  {value.title}
+                </h3>
+                <p className="text-2xl md:text-lg lg:text-sm break-all break-words">{value.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <OurServices />
+      <WhyChooseUs />
+      <Testimonials />
+      <MeetTeam />
+
+      <div className="w-[90vw] lg:*:w-[80vw] mx-auto z-10 mb-16">
+        <Banner />
       </div>
-    </section>
-
-
-<OurServices/>
-<WhyChooseUs/>
-<Testimonials/>
-<MeetTeam/>
-
-<div className="w-[90vw] lg:*:w-[80vw] mx-auto z-10 mb-16">
-<Banner />
-</div>
-
     </div>
-  )
-}
+  );
+};
 
-export default About
+export default About;

@@ -22,7 +22,7 @@ const testimonials = [
         </h2>
   
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-3 gap-32 lg:gap-8">
+        <div className="grid lg:grid-cols-3 gap-32 lg:gap-8">
           {testimonials.map((testimonial, index) => (
             <div
               key={index}

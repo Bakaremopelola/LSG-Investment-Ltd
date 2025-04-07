@@ -15,9 +15,9 @@ const HowItWorks = () => {
         offering comprehensive solutions to meet your real estate needs.
       </p>
 
-      <div className="flex justify-center gap-6 mt-10 flex-wrap lg:flex-rows flex-col">
+      <div className="flex justify-center gap-6 mt-10 flex-wrap flex-row">
         {steps.map((step) => (
-          <div key={step.id} className="relative flex flex-col items-center">
+          <div key={step.id} className="relative flex flex-col  items-center">
             <div className="lg:w-48 lg:h-48 w-96 h-96 bg-green-500 rounded-full border-4 border-gray-900 flex items-center justify-center text-white text-center p-4">
               <div>
                 <h3 className="text-3xl md:text-lg font-semibold">{step.title}</h3>

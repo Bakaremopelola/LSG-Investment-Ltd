@@ -17,7 +17,7 @@ const OurServices = () => {
       </p>
 
       {/* Services Grid */}
-      <div className="grid md:grid-cols-3 text-2xl gap-8">
+      <div className="grid lg:grid-cols-3 text-2xl gap-8">
         {/* Sales */}
         <div className=" overflow-hidden p-4">
           <img

@@ -8,7 +8,7 @@ import { FiMessageCircle } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A0F3A] text-white py-10 px-6 lg:px-20 h-[82vh] lg:h-auto">
+    <footer className="bg-[#0A0F3A] text-white py-10 px-6 lg:px-20 h-[82vh] md:h-auto lg:h-auto">
       
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
       <div className="hidden lg:flex">
