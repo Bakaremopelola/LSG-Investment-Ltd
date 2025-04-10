@@ -86,7 +86,7 @@ const Faq = () => {
 
             <section className="bg-gray-100 py-12 px-4">
                 <div className="w-[80vw] mx-auto text-center">
-                    <h2 className="text-2xl font-bold text-[#1D2150] mb-6">General Questions</h2>
+                    <h2 className=" text-3xl lg:text-2xl font-bold text-[#1D2150] mb-6">General Questions</h2>
 
                     <div className="space-y-4">
                     {faqs.map((item, index) => (
@@ -95,7 +95,7 @@ const Faq = () => {
                                     onClick={() => toggleAccordion(index)}
                                     className="w-full flex justify-between items-center p-4 text-white font-semibold"
                                 >
-                                     <span className="relative px-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
+                                     <span className="relative text-2xl  px-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
                                      {item.question}
                                      </span>
                                     <FaChevronDown
@@ -104,7 +104,7 @@ const Faq = () => {
                                     />
                                 </button>
                                 {openIndex === index && (
-                                    <div className="bg-green-200 text-black p-4 text-left">
+                                    <div className="bg-green-200 text-2xl text-black  p-8 text-left">
                                         {item.answer}
                                     </div>
                                 )}
@@ -117,7 +117,7 @@ const Faq = () => {
 
             <section className="bg-gray-100 py-12 px-4">
                 <div className="w-[80vw] mx-auto text-center">
-                    <h2 className="text-2xl font-bold text-[#1D2150] mb-6">
+                    <h2 className="text-3xl font-bold text-[#1D2150] mb-6">
                         Questions About Maitama Gardens Estate
                     </h2>
 
@@ -129,7 +129,7 @@ const Faq = () => {
                                     className="w-full flex justify-between items-center p-4 text-white font-semibold"
                                 >
                                     
-                                    <span className="relative px-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
+                                    <span className="relative px-4 text-2xl m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
                                     {index + 1}. {item.question}
 </span>
                                     <FaChevronDown
@@ -138,7 +138,7 @@ const Faq = () => {
                                     />
                                 </button>
                                 {openIndex === index && (
-                                    <div className="bg-green-200 text-black p-4 text-left">
+                                    <div className="bg-green-200 text-black p-8 text-2xl text-left">
                                         {item.answer}
                                     </div>
                                 )}

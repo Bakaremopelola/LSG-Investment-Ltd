@@ -36,7 +36,7 @@ const Hero = () => {
         <h1 className="text-xl  md:text-3xl lg:text-6xl text-[#1D2150] font-bold  w-[40vw] lg:w-auto ">
           Ready to <span className="text-green-500">Buy</span>,{" "}
           <span className="text-green-500">Sell</span>, or{" "}
-          <span className="text-green-500">Invest</span>?
+          <span className="text-green-500">Invest ?</span>
         </h1>
         <p className="mt-4 text-sm lg:text-[1.3em] w-[45vw] lg:w-auto ">
           We simplify your real estate journey with verified land deals,
