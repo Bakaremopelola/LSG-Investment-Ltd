@@ -20,7 +20,7 @@ const Hero = () => {
 
   return (
     <section
-      className="relative w-full h-[60vh] lg:h-[80vh] flex justify-start items-center px-4 lg:px-16 bg-cover "
+      className="relative w-full h-auto py-8 md:h-[60vh] lg:h-[80vh] flex justify-start items-center px-4 lg:px-16 bg-cover "
      
     >
      
