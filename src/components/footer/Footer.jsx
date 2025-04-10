@@ -8,7 +8,7 @@ import { FiMessageCircle } from "react-icons/fi";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#0A0F3A] text-white py-10 px-6 lg:px-20 h-[82vh] md:h-auto lg:h-auto">
+    <footer className="bg-[#0A0F3A] text-white py-10 px-6 lg:px-20 h-auto md:h-auto lg:h-auto">
       
       <div className="container mx-auto grid grid-cols-2 md:grid-cols-4 gap-8 place-items-center">
       <div className="hidden lg:flex">
@@ -76,13 +76,13 @@ const Footer = () => {
         <div>
           <h3 className="text-lg font-semibold mb-4">Follow Us</h3>
           <div className="flex space-x-4">
-            <a href="https://web.facebook.com/lsginvestmentltd" className="p-2 rounded-full  hover:bg-gray-200 transition">
+            <a href="https://web.facebook.com/lsginvestmentltd" className="p-2 rounded-full  hover:bg-gray-900 transition">
               <FaFacebookF size={16} />
             </a>
-            <a href="https://www.instagram.com/lsginvestmentlimited" className="p-2 rounded-full hover:bg-gray-200 transition">
+            <a href="https://www.instagram.com/lsginvestmentlimited" className="p-2 rounded-full hover:bg-gray-900 transition">
               <FaInstagram size={16} />
             </a>
-            <a href="https://www.linkedin.com/company/lsginvestmentltd" className="p-2 rounded-full  hover:bg-gray-200 transition">
+            <a href="https://www.linkedin.com/company/lsginvestmentltd" className="p-2 rounded-full  hover:bg-gray-900 transition">
               <FaLinkedinIn size={16} />
             </a>
           </div>

@@ -26,7 +26,7 @@ const testimonials = [
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative  h-[40vh] lg:h-auto"
+              className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative  h-auto lg:h-auto"
             >
               {/* Stars */}
               <div className="flex justify-end mb-3">

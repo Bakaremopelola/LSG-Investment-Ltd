@@ -14,7 +14,7 @@ const Banner = () => {
     navigate("/realtor")
   }
   return (
-    <div className="bg-gradient-to-r from-yellow-500 to-green-500 px-6 lg:px-40 py-6 flex flex-col lg:flex-row  md:justify-between items-center text-white rounded-lg shadow-lg mx-auto">
+    <div className="bg-gradient-to-r from-yellow-500 to-green-500 px-6 lg:px-40 py-6 flex flex-col lg:flex-row  md:justify-between items-center w-full text-white rounded-lg shadow-lg mx-auto">
       {/* Text Section */}
       <div className="text-center lg:text-left mb-4 md:mb-0">
         <h2 className="text-3xl lg:text-2xl font-bold">Ready to Buy, Sell, or Invest?</h2>

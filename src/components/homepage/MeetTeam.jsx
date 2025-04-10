@@ -58,7 +58,7 @@ const MeetTeam = () => {
         <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
           Meet Our Team
         </h2>
-        <p className="text-gray-600 max-w-2xl mx-auto">
+        <p className="text-gray-600 max-w-4xl mx-auto text-2xl">
           Our team prioritizes your safety, led by our trusted legal advisor who ensures all transactions are secure and legally sound.
         </p>
       </div>
@@ -75,7 +75,7 @@ const MeetTeam = () => {
             <div className="absolute bottom-13 left-0 bg-green-600 text-black w-[50vw] md:w-[25vw] lg:w-[15vw] text-2xl px-3 py-2 rounded">
               {member.name}
             </div>
-            <p className="text-center text-gray-700 mt-3 pb-4 font-medium">{member.role}</p>
+            <p className="text-center text-2xl lg:text-3xl text-gray-800 mt-3 pb-4 font-medium">{member.role}</p>
           </div>
         ))}
       </div>

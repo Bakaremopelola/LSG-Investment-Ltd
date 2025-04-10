@@ -49,13 +49,13 @@ const FaqSection = () => {
       <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
         Frequently Asked Questions
       </h2>
-      <p className="text-gray-600 mb-6">
+      <p className="text-gray-600 mb-6 lg:text-2xl ">
         Explore our FAQ to find the information you need about buying, selling,
         and investing in land with us.
       </p>
 
       {/* FAQ List */}
-      <div className="space-y-4 lg:w-[70vw] sm:max-w-3xl mx-auto w-full">
+      <div className="space-y-4 lg:w-[70vw] sm:max-w-7xl mx-auto w-full">
         {faqs.map((faq, index) => (
           <div
             key={index}
@@ -94,7 +94,7 @@ const FaqSection = () => {
       {/* Button */}
       <button
         onClick={handleSubmit}
-        className="mt-6 px-6 py-2 bg-[#1D2150] text-white rounded-lg cursor-pointer hover:bg-[#13163A] transition"
+        className="mt-16 px-8 py-4 bg-[#1D2150] text-white rounded-lg cursor-pointer text-2xl hover:bg-[#13163A] transition"
       >
         See more..
       </button>

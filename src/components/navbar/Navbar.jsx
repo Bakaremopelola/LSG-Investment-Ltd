@@ -53,14 +53,14 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-[#1D2150] h-[10vh] w-full sticky top-0 z-10 flex justify-between items-center px-6">
+    <nav className="bg-[#1D2150] h-[10vh] w-full sticky top-0 z-10 flex justify-between items-center px-8 mx-auto">
       {/* Logo */}
       <div>
         <img src={logo} alt="Logo" className="h-[9vh]" />
       </div>
 
       {/* Desktop Navigation */}
-      <div className="hidden md:flex gap-8 text-white text-[1.2em]">
+      <div className="hidden md:flex gap-8 text-white text-[1.2em] ">
         <Link to="/">Home</Link>
         <Link to="/about">About Us</Link>
         <Link to="/our_services">Services</Link>
@@ -69,7 +69,7 @@ const Navbar = () => {
       </div>
 
       {/* Call to Action Button for Desktop */}
-      <div className="hidden md:block">
+      <div className="hidden md:block mr-8">
         <Button
           width="w-full"
           padding="px-6 py-3"
