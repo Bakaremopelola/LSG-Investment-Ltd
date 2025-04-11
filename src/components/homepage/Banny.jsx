@@ -45,7 +45,7 @@ const Banners = () => {
 
   return (
     <section className="w-full lg:w-[80vw] md:w-3xl mx-auto h-[40vh] lg:h-[30vh] flex items-center justify-center px-6 md:px-16 py-6">
-      <div className="bg-[#47B649] lg:bg-[#1D2150] text-white rounded-2xl w-full px-12 md:px-8 py-6 flex flex-col lg:flex-row items-center jusify-center lg:justify-between shadow-lg h-[30vh] ">
+      <div className="bg-[#47B649] lg:bg-[#1D2150] text-white rounded-2xl w-full px-12 md:px-8  flex flex-col lg:flex-row items-center jusify-center lg:justify-between shadow-lg h-auto py-8 ">
         {/* Left Content */}
         <div className="text-center lg:text-left">
           <h2 className="text-2xl md:text-4xl font-semibold">

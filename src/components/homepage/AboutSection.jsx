@@ -18,7 +18,7 @@ const AboutSection = () => {
         <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-gray-900">
           Who We Are
         </h2>
-        <p className="mt-3 text-gray-600 text-2xl px-4 lg:px-16 mx-auto">
+        <p className="mt-3 text-gray-600 text-2xl px-4 lg:px-16 mx-auto ">
           LSG Investment Limited is a trusted real estate company dedicated to
           revolutionizing property ownership in Nigeria. With over a decade of
           expertise, we provide innovative solutions in real estate sales,
@@ -41,7 +41,7 @@ const AboutSection = () => {
 
         <div className="bg-[#1D2150] text-white px-6 md:px-10 w-[80vw] py-12 lg:px-20 md:w-[35vw] lg:w-[25vw] md:h-[700px] shadow-lg">
           <h3 className="text-xl lg:text-4xl font-semibold mb-3">About Us</h3>
-          <p className=" text- lg:text-[1.3em] leading-relaxed">
+          <p className=" text- lg:text-[1.3em] text-justify leading-relaxed">
             Founded in 2024 by seasoned engineers and builders, LSG Investment
             Limited is a visionary real estate company with over a decade of
             expertise in transforming Nigeria’s property landscape. We are
@@ -50,7 +50,7 @@ const AboutSection = () => {
             ownership opportunities while fostering trust, informed
             decision-making, and sustainable community growth.
           </p>
-          <button onClick={handleClick} className="mt-4 bg-white text-[#1D2150] px-4 py-2 rounded-md text-sm font-medium hover:bg-gray-200 transition">
+          <button onClick={handleClick} className="mt-4 bg-white text-[#1D2150] px-4 py-2  rounded-md text-sm font-medium hover:bg-gray-200 transition">
             See more..
           </button>
         </div>
