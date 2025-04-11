@@ -63,7 +63,7 @@ const FaqSection = () => {
           >
             {/* Question */}
             <button
-              className="w-full flex justify-between items-center p-4 text-lg font-semibold"
+              className="w-full flex justify-between bg-green-500 items-center p-4 text-lg font-semibold"
               onClick={() => toggleFAQ(index)}
             >
            <span className="relative p-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
