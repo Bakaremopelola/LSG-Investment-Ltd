@@ -44,46 +44,50 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="px-6 lg:px-20 py-16 bg-[#F8FAFC] text-center">
+    <section className="px-4 lg:px-20 py-12 bg-[#F8FAFC] text-center w-full">
       {/* Title */}
-      <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-3">
+      <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">
         Frequently Asked Questions
       </h2>
-      <p className="text-gray-600 mb-6 lg:text-2xl ">
+      <p className="text-gray-600 mb-6 text-base lg:text-2xl">
         Explore our FAQ to find the information you need about buying, selling,
         and investing in land with us.
       </p>
 
       {/* FAQ List */}
-      <div className="space-y-4 lg:w-[70vw] sm:max-w-7xl mx-auto w-full">
+      <div className="space-y-4 w-full max-w-4xl mx-auto">
         {faqs.map((faq, index) => (
           <div
             key={index}
             className="rounded-lg bg-green-500 text-white shadow-md overflow-hidden"
+            style={{ backgroundColor: "#10B981" }} /* Explicit background color backup */
           >
             {/* Question */}
             <button
-              className="w-full flex justify-between  items-center p-4 text-lg font-semibold"
+              className="w-full flex justify-between items-center p-4 text-base lg:text-lg font-semibold"
               onClick={() => toggleFAQ(index)}
             >
-           <span className="relative p-4 m-2 after:block after:h-[2px] after:bg-blue-950 after:w-full after:mt-2">
-  {faq.question}
-</span>
+              <span className="relative p-2 m-2 border-b-2 border-blue-950 text-left">
+                {faq.question}
+              </span>
 
               {openIndex === index ? (
                 <div className="w-8 h-8 bg-[#1D2150] flex justify-center items-center rounded-full">
-                  <ChevronUp className="w-5 h-5 text-white" stroke="white" />
+                  <ChevronUp className="w-5 h-5 text-white" />
                 </div>
               ) : (
-                <div className="w-8 h-8 bg-[#1D2150] text-green-500 flex justify-center items-center rounded-full">
-                  <ChevronDown className="w-5 h-5 text-white" stroke="white" />
+                <div className="w-8 h-8 bg-[#1D2150] flex justify-center items-center rounded-full">
+                  <ChevronDown className="w-5 h-5 text-white" />
                 </div>
               )}
             </button>
 
             {/* Answer */}
             {openIndex === index && (
-              <div className="p-8 bg-green-600 text-white text-left text-sm">
+              <div 
+                className="p-6 text-white text-left text-sm"
+                style={{ backgroundColor: "#059669" }} /* Explicit background color backup */
+              >
                 {faq.answer}
               </div>
             )}
@@ -94,7 +98,7 @@ const FaqSection = () => {
       {/* Button */}
       <button
         onClick={handleSubmit}
-        className="mt-16 px-8 py-4 bg-[#1D2150] text-white rounded-lg cursor-pointer text-2xl hover:bg-[#13163A] transition"
+        className="mt-12 px-6 py-3 bg-[#1D2150] text-white rounded-lg cursor-pointer text-lg lg:text-2xl hover:bg-[#13163A] transition"
       >
         See more..
       </button>
