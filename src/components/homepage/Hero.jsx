@@ -48,18 +48,17 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-auto py-8 md:h-[60vh] lg:h-[80vh] flex justify-start items-center px-4 lg:px-16 bg-cover"
+      className="relative w-full h-auto py-16 md:h-[60vh] lg:h-[80vh] flex justify-start items-center px-4 lg:px-16 bg-cover"
     >
-      {/* Lazy-loaded Background */}
       {isVisible && (
-        <div
-          className="absolute inset-0 bg-opacity-40 bg-no-repeat scale-x-[-1] lg:bg-cover bg-[length:100%_100%]"
-          style={{ backgroundImage: `url(${bg})` }}
-        ></div>
-      )}
+  <div
+    className="absolute inset-0 bg-opacity-40 bg-no-repeat scale-x-[-1] bg-cover bg-[length:100%_100%]"
+    style={{ backgroundImage: `url(${bg})` }}
+  ></div>
+)}
 
       {/* Content */}
-      <div className="relative z-8 md:p-32 lg:text-[#1D2150] sm:w-[30vw] lg:w-[50vw] px-4 lg:px-10 py-12 md:px-8 mx-auto md:m-0 text-left sm:text-left ml-0 sm:ml-4">
+      <div className="relative z-8 md:p-32 lg:text-[#1D2150] sm:w-[30vw] lg:w-[50vw] px-4 lg:px-10 py-24 md:px-8 mx-auto md:m-0 text-left sm:text-left ml-0 sm:ml-4">
         <h1 className="text-xl md:text-3xl lg:text-6xl text-[#1D2150] font-bold w-[40vw] lg:w-auto">
           Ready to <span className="text-green-500">Buy</span>,{" "}
           <span className="text-green-500">Sell</span>, or{" "}
