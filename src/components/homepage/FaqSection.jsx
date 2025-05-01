@@ -44,12 +44,12 @@ const FaqSection = () => {
   };
 
   return (
-    <section className="px-4 lg:px-20 py-12 bg-[#F8FAFC] text-center w-full">
+    <section className="px-4 lg:px-20 py-12 bg-gray-50 text-center w-full">
       {/* Title */}
       <h2 className="text-2xl lg:text-4xl font-bold text-gray-900 mb-3">
         Frequently Asked Questions
       </h2>
-      <p className="text-gray-600 mb-6 text-base lg:text-2xl">
+      <p className="text-gray-600 mb-6 text-base lg:text-xl">
         Explore our FAQ to find the information you need about buying, selling,
         and investing in land with us.
       </p>
@@ -59,24 +59,24 @@ const FaqSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="rounded-lg bg-green-500 text-white shadow-md overflow-hidden"
-            style={{ backgroundColor: "#10B981" }} /* Explicit background color backup */
+            className="rounded-lg overflow-hidden shadow-md"
           >
             {/* Question */}
             <button
-              className="w-full flex justify-between items-center p-4 text-base lg:text-lg font-semibold"
+              className={`w-full flex justify-between items-center p-4 text-base lg:text-lg font-semibold ${
+                openIndex === index ? "bg-emerald-600" : "bg-emerald-500"
+              } text-white`}
               onClick={() => toggleFAQ(index)}
             >
-              <span className="relative p-2 m-2 border-b-2 border-blue-950 text-left">
+              <span className="text-left">
                 {faq.question}
               </span>
-
               {openIndex === index ? (
-                <div className="w-8 h-8 bg-[#1D2150] flex justify-center items-center rounded-full">
+                <div className="w-8 h-8 bg-indigo-900 flex justify-center items-center rounded-full">
                   <ChevronUp className="w-5 h-5 text-white" />
                 </div>
               ) : (
-                <div className="w-8 h-8 bg-[#1D2150] flex justify-center items-center rounded-full">
+                <div className="w-8 h-8 bg-indigo-900 flex justify-center items-center rounded-full">
                   <ChevronDown className="w-5 h-5 text-white" />
                 </div>
               )}
@@ -84,10 +84,7 @@ const FaqSection = () => {
 
             {/* Answer */}
             {openIndex === index && (
-              <div 
-                className="p-6 text-white text-left text-sm"
-                style={{ backgroundColor: "#059669" }} /* Explicit background color backup */
-              >
+              <div className="p-6 bg-emerald-700 text-white text-left text-sm lg:text-base">
                 {faq.answer}
               </div>
             )}
@@ -98,7 +95,7 @@ const FaqSection = () => {
       {/* Button */}
       <button
         onClick={handleSubmit}
-        className="mt-12 px-6 py-3 bg-[#1D2150] text-white rounded-lg cursor-pointer text-lg lg:text-2xl hover:bg-[#13163A] transition"
+        className="mt-12 px-6 py-3 bg-indigo-900 text-white rounded-lg cursor-pointer text-base lg:text-lg hover:bg-indigo-800 transition-colors duration-300"
       >
         See more..
       </button>

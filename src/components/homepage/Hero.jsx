@@ -1,5 +1,3 @@
-
-
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../Button";
 import bg from "../../assets/bgimage.jpg";
@@ -23,7 +21,7 @@ const Hero = () => {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // Optional: stop observing after load
+          observer.disconnect();
         }
       },
       {
@@ -31,31 +29,31 @@ const Hero = () => {
       }
     );
   
-    // Store the current value of the ref
     const currentSectionRef = sectionRef.current;
   
     if (currentSectionRef) {
       observer.observe(currentSectionRef);
     }
   
-    // Use the stored reference in cleanup
     return () => {
       if (currentSectionRef) {
         observer.unobserve(currentSectionRef);
       }
     };
   }, []);
+
   return (
     <section
       ref={sectionRef}
-      className="relative w-full h-auto py-16 md:h-[60vh] lg:h-[80vh] flex justify-start items-center px-4 lg:px-16 bg-cover"
+      className="relative w-full h-auto py-16 md:h-[60vh] lg:h-[80vh] flex justify-start items-center px-4 lg:px-16"
     >
       {isVisible && (
-  <div
-    className="absolute inset-0 bg-opacity-40 bg-no-repeat scale-x-[-1] bg-cover bg-[length:100%_100%]"
-    style={{ backgroundImage: `url(${bg})` }}
-  ></div>
-)}
+        <div
+          className="absolute inset-0 bg-opacity-40 bg-no-repeat scale-x-[-1] 
+                    bg-contain md:bg-cover bg-center"
+          style={{ backgroundImage: `url(${bg})` }}
+        ></div>
+      )}
 
       {/* Content */}
       <div className="relative z-8 md:p-32 lg:text-[#1D2150] sm:w-[30vw] lg:w-[50vw] px-4 lg:px-10 py-24 md:px-8 mx-auto md:m-0 text-left sm:text-left ml-0 sm:ml-4">
@@ -72,12 +70,12 @@ const Hero = () => {
 
         <h3 className="my-4 lg:my-8 text-[1.2em]">Get Started as:</h3>
 
-        {/* Buttons */}
-        <div className="lg:mt-6 flex gap-4">
+        {/* Buttons - Updated with responsive sizing */}
+        <div className="lg:mt-6 flex gap-2 md:gap-4">
           <Button
             onClick={handleClick}
             backgroundColor="bg-[#1D2150]"
-            className="rounded-3xl px-10"
+            className="rounded-3xl px-4 py-2 md:px-10 md:py-3 text-sm md:text-base"
             textColor="text-white"
           >
             Investor
@@ -86,14 +84,14 @@ const Hero = () => {
             onClick={handleSubmit}
             backgroundColor="bg-transparent"
             textColor="text-[#1D2150]"
-            className="rounded-3xl border-2 border-[#1D2150]"
+            className="rounded-3xl border-2 border-[#1D2150] px-4 py-2 md:px-10 md:py-3 text-sm md:text-base"
           >
             Partner with Us
           </Button>
         </div>
 
         {/* Stats */}
-        <div className="mt-8 flex space-x-8 text-sm">
+        <div className="mt-8 flex space-x-4 md:space-x-8 text-sm">
           <div>
             <p className="text-2xl font-bold">13+</p>
             <p className="text-base w-[10vw] md:w-auto lg:">
