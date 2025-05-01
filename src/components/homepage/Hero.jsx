@@ -116,8 +116,7 @@
 
 // export default Hero;
 
-
-
+// Hero.js
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../Button";
 import bg from "../../assets/bgimage.jpg";
@@ -165,12 +164,13 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-[100vw] min-h-[80vh] flex justify-start items-center px-4 lg:px-16 overflow-hidden"
+      className="relative w-full min-h-[80vh] flex justify-start items-center px-4 lg:px-16 overflow-hidden"
+      style={{ marginTop: "0vh" }} // Add margin to account for fixed navbar
     >
       {/* Background Image */}
       {isVisible && (
         <div
-          className="absolute inset-0 bg-no-repeat scale-x-[-1] bg-cover bg-center z-0"
+          className="absolute inset-0 bg-no-repeat scale-x-[-1] bg-cover bg-center"
           style={{ 
             backgroundImage: `url(${bg})`,
             backgroundSize: "cover",
