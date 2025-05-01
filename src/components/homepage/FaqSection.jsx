@@ -65,7 +65,7 @@ const FaqSection = () => {
             <button
               className={`w-full flex justify-between items-center p-4 text-base lg:text-lg font-semibold ${
                 openIndex === index ? "bg-emerald-600" : "bg-emerald-500"
-              } text-white`}
+              } bg-emerald-600 text-white`}
               onClick={() => toggleFAQ(index)}
             >
               <span className="text-left">
