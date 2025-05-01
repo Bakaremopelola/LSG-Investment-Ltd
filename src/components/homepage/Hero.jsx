@@ -165,7 +165,7 @@ const Hero = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-[80vh] flex justify-start items-center px-4 lg:px-16 overflow-hidden"
+      className="relative w-[100vw] min-h-[80vh] flex justify-start items-center px-4 lg:px-16 overflow-hidden"
     >
       {/* Background Image */}
       {isVisible && (
