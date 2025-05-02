@@ -173,15 +173,15 @@ const FaqSection = () => {
             <button
               className={`w-full flex justify-between items-center p-4 text-base sm:text-lg font-semibold text-white ${
                 openIndex === index ? "bg-emerald-600" : "bg-emerald-500"
-              } hover:bg-emerald-600 transition-colors duration-200`}
+              } bg-emerald-600 transition-colors duration-200`}
               onClick={() => toggleFAQ(index)}
             >
               <span className="text-left flex-1 pr-4">{faq.question}</span>
               <div className="w-8 h-8 bg-indigo-900 flex justify-center items-center rounded-full flex-shrink-0">
                 {openIndex === index ? (
-                  <ChevronUp className="w-5 h-5 text-white" />
+                  <ChevronUp className="w-5 h-5 bg-indigo-900 text-white" />
                 ) : (
-                  <ChevronDown className="w-5 h-5 text-white" />
+                  <ChevronDown className="w-5 h-5 bg-indigo-900 text-white" />
                 )}
               </div>
             </button>
