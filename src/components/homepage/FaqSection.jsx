@@ -167,7 +167,7 @@ const FaqSection = () => {
         {faqs.map((faq, index) => (
           <div
             key={index}
-            className="rounded-lg overflow-hidden shadow-md bg-white"
+            className="rounded-lg overflow-hidden shadow-md bg-emerald-600"
           >
             {/* Question */}
             <button
@@ -176,7 +176,7 @@ const FaqSection = () => {
               } bg-emerald-600 transition-colors duration-200`}
               onClick={() => toggleFAQ(index)}
             >
-              <span className="text-left flex-1 pr-4">{faq.question}</span>
+              <span className="text-left flex-1 pr-4 bg-emerald-600">{faq.question}</span>
               <div className="w-8 h-8 bg-indigo-900 flex justify-center items-center rounded-full flex-shrink-0">
                 {openIndex === index ? (
                   <ChevronUp className="w-5 h-5 bg-indigo-900 text-white" />
@@ -199,7 +199,7 @@ const FaqSection = () => {
       {/* Button */}
       <button
         onClick={handleSubmit}
-        className="mt-12 px-6 py-3 bg-indigo-900 text-white rounded-lg cursor-pointer text-base sm:text-lg hover:bg-indigo-800 transition-colors duration-300"
+        className="mt-12 px-6 py-3 bg-indigo-800 text-white rounded-lg cursor-pointer text-base sm:text-lg hover:bg-indigo-800 transition-colors duration-300"
       >
         See more..
       </button>
