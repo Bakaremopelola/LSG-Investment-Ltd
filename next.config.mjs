@@ -13,6 +13,8 @@ const nextConfig = {
       },
     ],
     unoptimized: true,
+    domains: ['images.unsplash.com', 'images.pixels.com'],
+    formats: ['image/avif', 'image/webp'],
   },
   // Modern optimization features
   optimizeFonts: true,
@@ -22,25 +24,17 @@ const nextConfig = {
   // Improved performance settings
   poweredByHeader: false,
   compress: true,
-  // Add output configuration for static export
+  // Static export configuration
   output: 'export',
-  // Ensure proper asset handling
+  // Asset handling
   assetPrefix: process.env.NODE_ENV === 'production' ? '.' : '',
   // Disable server-side features for static export
   trailingSlash: true,
-  // Remove duplicate images config
-  // Ensure proper image optimization
-  images: {
-    loader: 'custom',
-    loaderFile: './image-loader.js',
-    domains: ['images.unsplash.com', 'images.pixels.com'],
-    formats: ['image/avif', 'image/webp'],
-  },
-  // Add proper error handling
+  // Error handling
   onError: (err) => {
     console.error('Next.js build error:', err);
   },
-  // Add proper webpack configuration
+  // Webpack configuration
   webpack: (config, { isServer }) => {
     // Optimize production builds
     if (!isServer) {

@@ -1,15 +1,15 @@
 "use client"
 
-
 import React, { useState } from "react";
-import { NavLink, useLocation } from "react-router-dom";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { MdLogout, MdOutlineClass, MdAssignment } from "react-icons/md";
 import { Menu, ChevronLeft } from "lucide-react";
 
 const AdminSidebar = () => {
   const [isCollapsed, setIsCollapsed] = useState(false);
-  const location = useLocation(); // Get the current URL path
+  const pathname = usePathname(); // Get the current URL path
 
   // Sidebar links
   const links = [
@@ -41,33 +41,34 @@ const AdminSidebar = () => {
         </button>
       </div>
 
-      {/* Sidebar Links */}
-      <ul className="space-y-2 flex-grow">
-        {links.map((link, index) => (
-          <li key={index} className="group relative">
-            <NavLink
-              to={link.path}
-              className={({ isActive }) =>
-                `p-4 flex items-center rounded-lg cursor-pointer transition-all duration-300 
-                ${isCollapsed ? "justify-center" : "gap-2"} 
-                ${isActive || location.pathname === link.path ? "bg-blue-900 w-full" : "hover:bg-blue-500 text-white"}`
-              }
-            >
-              {link.icon}
-              {!isCollapsed && <span>{link.name}</span>}
-            </NavLink>
+      {/* Navigation Links */}
+      <nav className="flex-1">
+        <ul className="space-y-2">
+          {links.map((link) => (
+            <li key={link.name}>
+              <Link
+                href={link.path}
+                className={`flex items-center p-2 rounded-lg transition-colors ${
+                  pathname === link.path
+                    ? "bg-blue-800"
+                    : "hover:bg-blue-600"
+                }`}
+              >
+                {link.icon}
+                {!isCollapsed && <span className="ml-3">{link.name}</span>}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
 
-            {/* Tooltip when collapsed */}
-            {isCollapsed && (
-              <span className="absolute left-full ml-2 bg-black text-white text-xs rounded-md px-2 py-1 opacity-0 group-hover:opacity-100 transition-all">
-                {link.name}
-              </span>
-            )}
-          </li>
-        ))}
-      </ul>
-
-    
+      {/* Logout Button */}
+      <div className="mt-auto">
+        <button className="flex items-center p-2 w-full rounded-lg hover:bg-blue-600 transition-colors">
+          <MdLogout size={20} />
+          {!isCollapsed && <span className="ml-3">Logout</span>}
+        </button>
+      </div>
     </div>
   );
 };

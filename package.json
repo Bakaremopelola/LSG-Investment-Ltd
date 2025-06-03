@@ -10,7 +10,8 @@
     "export": "next build && next export",
     "clean": "rm -rf .next out",
     "prebuild": "npm run clean",
-    "analyze": "ANALYZE=true next build"
+    "analyze": "ANALYZE=true next build",
+    "lint": "next lint --fix"
   },
   "dependencies": {
     "@heroicons/react": "^2.1.1",
