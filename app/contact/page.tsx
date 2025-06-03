@@ -1,8 +1,6 @@
 "use client"
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import emailjs from "@emailjs/browser";
-// import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import ex from "../../assets/Frame14.png";
 import Banner from "../components/homepage/Banner";
 import Image from "next/image";
@@ -16,7 +14,6 @@ interface FormData {
 }
 
 const Contact = () => {
-
   const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
@@ -26,42 +23,46 @@ const Contact = () => {
 
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState<string | null>(null);
-   // @ts-ignore
+
   const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-// @ts-ignore
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 
     try {
-      await emailjs.send(
-        "your_service_id", 
-        "your_template_id", 
-        {
+      const response = await fetch("https://lsg-backend.onrender.com/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
           name: formData.name,
           email: formData.email,
           subject: formData.subject,
           message: formData.message,
-        },
-        "your_public_key" 
-      );
-// @ts-ignore
+        }),
+      });
+
+      if (!response.ok) {
+        throw new Error("Failed to send message");
+      }
+
       setSuccess("Message sent successfully!");
       setFormData({ name: "", email: "", subject: "", message: "" });
     } catch (error) {
-        // @ts-ignore
-      setSuccess("Failed to send message. Try again later.");
+      setSuccess("Failed to send message. Please try again later.");
     }
 
     setLoading(false);
   };
+
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Hero Section */}
-      <div className="w-full bg-white text-center ">
+      <div className="w-full bg-white text-center">
         <Image src={ex} className="w-[100vw] h-[25vh] lg:h-auto" alt="" />
       </div>
 
@@ -151,7 +152,7 @@ const Contact = () => {
               placeholder="Your Message"
               className="p-3 bg-[#F2FAF6] rounded-md w-full h-36"
               required
-            ></textarea>
+            />
 
             <button
               type="submit"
@@ -163,14 +164,13 @@ const Contact = () => {
           </form>
 
           {success && (
-            // @ts-ignore
             <p className={`mt-4 text-center ${success.includes("Failed") ? "text-red-600" : "text-green-600"}`}>
               {success}
             </p>
           )}
         </div>
       </div>
-      <div className="sw-[90vw] lg:w-[80vw] mx-auto z-10 mb-16">
+      <div className="w-[90vw] lg:w-[80vw] mx-auto z-10 mb-16">
         <Banner />
       </div>
     </div>
