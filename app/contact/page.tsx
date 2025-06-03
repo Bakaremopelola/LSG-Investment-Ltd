@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState } from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 // import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import ex from "../../assets/Frame14.png";
@@ -8,11 +8,16 @@ import Banner from "../components/homepage/Banner";
 import Image from "next/image";
 import { BsFacebook, BsInstagram, BsLinkedin, BsMailbox, BsMap, BsPinMap } from "react-icons/bs";
 
-
+interface FormData {
+  name: string;
+  email: string;
+  subject: string;
+  message: string;
+}
 
 const Contact = () => {
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     name: "",
     email: "",
     subject: "",
@@ -20,14 +25,14 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const [success, setSuccess] = useState(null);
+  const [success, setSuccess] = useState<string | null>(null);
    // @ts-ignore
-  const handleChange = (e) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
 // @ts-ignore
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setLoading(true);
 

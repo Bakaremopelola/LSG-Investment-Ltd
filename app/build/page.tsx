@@ -1,7 +1,6 @@
 "use client"
 
-
-import { useState } from "react";
+import { useState, ChangeEvent, FormEvent } from "react";
 import ex from "../../assets/Frame66.png";
 import Banner from "../components/homepage/Banner";
 import Image from "next/image";
@@ -9,10 +8,17 @@ import { CgMail } from "react-icons/cg";
 import { BsInstagram, BsLinkedin, BsPinMap } from "react-icons/bs";
 import { FaFacebook } from "react-icons/fa";
 
+interface FormData {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  plots: string;
+  purpose: string;
+}
 
 const BuildingQuot = () => {
-
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
     phone: "",
@@ -20,13 +26,12 @@ const BuildingQuot = () => {
     plots: "",
     purpose: "",
   });
-// @ts-ignore
-  const handleChange = (e) => {
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  // @ts-ignore
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     try {
       const response = await fetch("https://lsg-backend.onrender.com/api/quotes", {
@@ -42,11 +47,11 @@ const BuildingQuot = () => {
           purpose: formData.purpose,
         }),
       });
-  
+
       if (!response.ok) {
         throw new Error("Failed to submit quote request");
       }
-  
+
       alert("Quote request sent successfully!");
       setFormData({
         firstName: "",
@@ -61,22 +66,21 @@ const BuildingQuot = () => {
       console.error(error);
     }
   };
-  
 
   return (
     <div className="min-h-screen bg-gray-100 flex flex-col">
       {/* Banner Section */}
-      <div className="w-full  text-center ">
+      <div className="w-full text-center">
         <Image
-          src={ex} 
+          src={ex}
           loading="lazy"
           alt="Pay Zero!"
           className="mx-auto w-full h-[25vh] lg:h-auto"
         />
       </div>
 
-       {/* Main Content */}
-       <div className="container mx-auto p-4 lg:h-[auto] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
+      {/* Main Content */}
+      <div className="container mx-auto p-4 lg:h-[auto] flex flex-col md:flex-row bg-white shadow-lg rounded-lg my-10">
         {/* Left: Contact Info */}
         <div className="w-full md:w-1/3 hidden md:flex flex-col bg-[#1D2150] text-white p-8 px-12 rounded-l-lg">
           <h2 className="text-4xl font-normal mb-6">Our Contact Info:</h2>
@@ -125,19 +129,69 @@ const BuildingQuot = () => {
 
           <form onSubmit={handleSubmit} className="space-y-4">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="text" name="firstName" value={formData.firstName} onChange={handleChange} placeholder="First name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
-              <input type="text" name="lastName" value={formData.lastName} onChange={handleChange} placeholder="Last name*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
+              <input
+                type="text"
+                name="firstName"
+                value={formData.firstName}
+                onChange={handleChange}
+                placeholder="First name*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
+              <input
+                type="text"
+                name="lastName"
+                value={formData.lastName}
+                onChange={handleChange}
+                placeholder="Last name*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <input type="tel" name="phone" value={formData.phone} onChange={handleChange} placeholder="Phone*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
-              <input type="email" name="email" value={formData.email} onChange={handleChange} placeholder="Email*" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
+              <input
+                type="tel"
+                name="phone"
+                value={formData.phone}
+                onChange={handleChange}
+                placeholder="Phone*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Email*"
+                className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+                required
+              />
             </div>
 
-            <input type="text" name="plots" value={formData.plots} onChange={handleChange} placeholder="Number of plots" className="p-3 bg-[#F2FAF6] rounded-md w-full h-16" required />
-            <textarea name="purpose" value={formData.purpose} onChange={handleChange} placeholder="Purpose of purchase" className="p-3 bg-[#F2FAF6] rounded-md w-full h-36" required></textarea>
+            <input
+              type="text"
+              name="plots"
+              value={formData.plots}
+              onChange={handleChange}
+              placeholder="Number of plots"
+              className="p-3 bg-[#F2FAF6] rounded-md w-full h-16"
+              required
+            />
+            <textarea
+              name="purpose"
+              value={formData.purpose}
+              onChange={handleChange}
+              placeholder="Purpose of purchase"
+              className="p-3 bg-[#F2FAF6] rounded-md w-full h-36"
+              required
+            />
 
-            <button type="submit" className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center md:w-auto">
+            <button
+              type="submit"
+              className="bg-blue-900 text-white py-3 px-16 rounded-2xl mx-auto self-center md:w-auto"
+            >
               Get Quote
             </button>
           </form>
@@ -145,8 +199,8 @@ const BuildingQuot = () => {
       </div>
 
       <div className="w-[90vw] lg:w-[80vw] mx-auto z-10 mb-16">
-<Banner/>
-</div>
+        <Banner />
+      </div>
     </div>
   );
 };

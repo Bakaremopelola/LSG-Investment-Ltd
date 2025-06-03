@@ -1,19 +1,27 @@
 "use client"
 
-import React, {useState} from "react";
+import React, { useState, ChangeEvent, FormEvent } from "react";
 // import { MapPin, Mail, Facebook, Instagram, Linkedin } from "lucide-react";
 import ex from "../../assets/Frame67.png"
 import Banner from "../components/homepage/Banner";
 import Image from "next/image";
 import { BsFacebook, BsInstagram, BsLinkedin, BsMailbox, BsMap, BsPinMap } from "react-icons/bs";
 
-
-
+interface FormData {
+  firstName: string;
+  lastName: string;
+  phone: string;
+  email: string;
+  licenseNumber: string;
+  agency: string;
+  experience: string;
+  specialization: string;
+}
 
 const Realtor = () => {
 
 
-  const [formData, setFormData] = useState({
+  const [formData, setFormData] = useState<FormData>({
     firstName: "",
     lastName: "",
     phone: "",
@@ -23,15 +31,15 @@ const Realtor = () => {
     experience: "",
     specialization: "",
   });
-// @ts-ignore
-  const handleChange = (e) => {
+
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-// @ts-ignore
-  const handleSubmit = async (e) => {
+
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const realtorData = {
-      name: `${formData.firstName} ${formData.lastName}`, // Combine first & last name
+      name: `${formData.firstName} ${formData.lastName}`,
       phone: formData.phone,
       email: formData.email,
       licenseNumber: formData.licenseNumber,

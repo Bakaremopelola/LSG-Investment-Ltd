@@ -1,10 +1,15 @@
 "use client"
 
 import { useState } from "react";
-import { useRouter }  from  "next/navigation";
+import { useRouter } from "next/navigation";
 import { BsChevronDown, BsChevronUp } from "react-icons/bs";
 
-const faqs = [
+interface FAQ {
+  question: string;
+  answer: string;
+}
+
+const faqs: FAQ[] = [
   {
     question: "Is the land free from any government acquisition or claim?",
     answer:
@@ -33,16 +38,15 @@ const faqs = [
 ];
 
 const FaqSection = () => {
-  const [openIndex, setOpenIndex] = useState(null);
-//@ts-ignore
-  const toggleFAQ = (index) => {
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const router = useRouter();
+
+  const toggleFAQ = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
-  const navigate = useRouter();
-
   const handleSubmit = () => {
-    navigate.push("/faq");
+    router.push("/faq");
   };
 
   return (
