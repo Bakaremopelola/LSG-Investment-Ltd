@@ -6,9 +6,13 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'images.unsplash.com',
+      },
+      {
+        protocol: 'https',
         hostname: 'images.pixels.com',
       },
     ],
+    unoptimized: true, // This helps with deployment issues
   },
   // Modern optimization features
   optimizeFonts: true,
@@ -18,6 +22,8 @@ const nextConfig = {
   // Improved performance settings
   poweredByHeader: false,
   compress: true,
+  // Add output configuration for static export
+  output: 'standalone',
 };
 
 export default nextConfig; 
