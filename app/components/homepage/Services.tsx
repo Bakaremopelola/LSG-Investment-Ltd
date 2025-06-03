@@ -1,7 +1,4 @@
 import Image from "next/image";
-import salesImage from "../../../assets/Frame76.png";
-import developmentImage from "../../../assets/Frame77.png";
-import consultancyImage from "../../../assets/Frame78.png";
 
 const OurServices = () => {
   return (
@@ -24,10 +21,12 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src={salesImage}
-              loading="lazy"
+              src="/assets/Frame76.png"
               alt="Sales"
+              width={500}
+              height={300}
               className="w-full h-full object-cover rounded-none"
+              priority
             />
           </div>
           <div className="p-6">
@@ -41,10 +40,12 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src={developmentImage}
-              loading="lazy"
+              src="/assets/Frame77.png"
               alt="Development"
+              width={500}
+              height={300}
               className="w-full h-full object-cover rounded-none"
+              priority
             />
           </div>
           <div className="p-6">
@@ -58,10 +59,12 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src={consultancyImage}
-              loading="lazy"
+              src="/assets/Frame78.png"
               alt="Consultancy"
+              width={500}
+              height={300}
               className="w-full h-full object-cover"
+              priority
             />
           </div>
           <div className="p-6">
