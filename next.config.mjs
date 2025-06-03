@@ -12,7 +12,7 @@ const nextConfig = {
         hostname: 'images.pixels.com',
       },
     ],
-    unoptimized: true, // This helps with deployment issues
+    unoptimized: true,
   },
   // Modern optimization features
   optimizeFonts: true,
@@ -23,7 +23,16 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   // Add output configuration for static export
-  output: 'standalone',
+  output: 'export',
+  // Ensure proper asset handling
+  assetPrefix: process.env.NODE_ENV === 'production' ? '.' : '',
+  // Disable server-side features for static export
+  trailingSlash: true,
+  // Ensure proper image optimization
+  images: {
+    loader: 'custom',
+    loaderFile: './image-loader.js',
+  },
 };
 
 export default nextConfig; 
