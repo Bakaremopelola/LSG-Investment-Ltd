@@ -1,68 +1,29 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export', 
-  trailingSlash: true, // Consistent URL endings
+  reactStrictMode: true,
   images: {
-    unoptimized: true, // Required for static exports
-    minimumCacheTTL: 60, // Minimum 60s cache for images
-    formats: ['image/webp'], // WebP only (smaller than AVIF for broad compatibility)
-    domains: [], // Restrict image domains if applicable
-  },
-  reactStrictMode: true, // Safe React practices
-  swcMinify: true, 
-  async headers() {
-    return [
+    remotePatterns: [
       {
-        source: '/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=3600, stale-while-revalidate=86400',
-          },
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY', // Clickjacking protection
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff', // MIME sniffing prevention
-          },
-        ],
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
       },
-      // Static assets cache longer
       {
-        source: '/_next/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable',
-          },
-        ],
+        protocol: 'https',
+        hostname: 'images.pixels.com',
       },
-    ];
+    ],
+    unoptimized: true, // This helps with deployment issues
   },
-  // Security headers (applied in production)
-  async rewrites() {
-    return {
-      beforeFiles: [
-        {
-          source: '/.well-known/security.txt',
-          destination: '/security.txt',
-        },
-      ],
-    };
+  // Modern optimization features
+  optimizeFonts: true,
+  compiler: {
+    removeConsole: process.env.NODE_ENV === 'production',
   },
-  // Disable unnecessary features for static export
-  experimental: {
-    serverActions: false, // Disabled for static export
-    optimizeCss: true, // Optional: Enable if using CSS
-  },
-  // Prevent info exposure
+  // Improved performance settings
   poweredByHeader: false,
-  generateEtags: false, // Disable weak ETags
-  compress: true, // Enable gzip/brotli
-  // Optional: Enable if using Sentry or error tracking
-  productionBrowserSourceMaps: false,
+  compress: true,
+  // Add output configuration for static export
+  output: 'standalone',
 };
 
-export default nextConfig;
+export default nextConfig; 

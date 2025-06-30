@@ -1,7 +1,7 @@
 import Image from "next/image";
-import img1 from "/assets/Frame76.png"
-import img2 from "/assets/Frame77.png"
-import img3 from "/assets/Frame78.png"
+import salesImage from "../../../assets/Frame76.png";
+import developmentImage from "../../../assets/Frame77.png";
+import consultancyImage from "../../../assets/Frame78.png";
 
 const OurServices = () => {
   return (
@@ -24,12 +24,10 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src={img1}
+              src={salesImage}
+              loading="lazy"
               alt="Sales"
-              width={500}
-              height={300}
               className="w-full h-full object-cover rounded-none"
-              priority
             />
           </div>
           <div className="p-6">
@@ -43,12 +41,10 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src={img2}
+              src={developmentImage}
+              loading="lazy"
               alt="Development"
-              width={500}
-              height={300}
               className="w-full h-full object-cover rounded-none"
-              priority
             />
           </div>
           <div className="p-6">
@@ -62,12 +58,10 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src={img3}
+              src={consultancyImage}
+              loading="lazy"
               alt="Consultancy"
-              width={500}
-              height={300}
               className="w-full h-full object-cover"
-              priority
             />
           </div>
           <div className="p-6">

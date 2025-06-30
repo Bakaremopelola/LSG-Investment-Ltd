@@ -13,7 +13,7 @@ import Banners from './components/homepage/Banny'
 
 const Home = () => {
     return (
-        <div className='flex flex-col mx-auto overflow-x-hidden bg-gray-50'>           
+        <div className='flex flex-col w-[100vw] overflow-x-hidden'>           
             <Hero />
             <AboutSection/>
             <OurServices/>

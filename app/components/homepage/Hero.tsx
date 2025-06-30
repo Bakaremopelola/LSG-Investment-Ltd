@@ -2,7 +2,6 @@
 // Hero.js
 import React, { useEffect, useRef, useState } from "react";
 import Button from "../Button";
-import Image from "next/image";
 import bg from "../../../assets/bgimage.jpg";
 import { useRouter } from "next/navigation";
 
@@ -53,16 +52,10 @@ const Hero = () => {
     >
       {/* Background Image */}
       {isVisible && (
-        <div className="absolute inset-0 bg-no-repeat bg-cover bg-center scale-x-[-1]">
-          <Image
-            src={bg}
-            alt="Background"
-            fill
-            priority
-            className="object-cover"
-            quality={100}
-          />
-        </div>
+        <div
+          className="absolute inset-0 bg-no-repeat bg-cover bg-center scale-x-[-1]"
+          style={{ backgroundImage: `url(${bg.src})` }}
+        />
       )}
 
       {/* Content Container */}

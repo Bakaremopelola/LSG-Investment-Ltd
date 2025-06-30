@@ -1,7 +1,3 @@
-"use client"
-
-
-
 import { useState } from "react";
 import Image from "next/image";
 
@@ -74,7 +70,7 @@ const Testimonials = () => {
             
           <div
             key={testimonial.id}
-            className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative flex flex-col lg:h-[500px] md:w-[20vw]"
+            className="bg-[#1D2150] text-white p-8 rounded-xl shadow-lg relative flex flex-col h-[400px]"
           >
             {/* Stars */}
             <div className="flex justify-end mb-3">
@@ -86,7 +82,7 @@ const Testimonials = () => {
             </div>
 
             {/* Testimonial Text */}
-            <div className="flex-grow h-[40vh]">
+            <div className="flex-grow overflow-y-auto">
               <p className="text-base md:text-lg lg:text-xl">{testimonial.text}</p>
             </div>
 
