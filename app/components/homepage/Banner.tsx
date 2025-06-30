@@ -26,10 +26,10 @@ const Banner = () => {
 
       {/* Buttons */}
       <div className="flex space-x-4 flex-col lg:flex-row gap-4">
-        <button onClick={handleClick} className="bg-blue-900 text-white px-5 py-2 rounded-4xl text-xl font-medium hover:bg-blue-700 w-[80vw] md:w-auto h-[4em] transition">
+        <button onClick={handleClick} className="bg-blue-900 text-white px-5 py-2 rounded-2xl text-xl font-medium hover:bg-blue-700 w-[80vw] md:w-auto h-[4em] transition">
           Get a FREE Quote
         </button>
-        <button onClick={handleSubmit} className="border border-blue-950 text-blue-950 lg:text-white px-5 py-2 rounded-4xl text-xl w-[80vw] lg:w-auto h-[4em] lg:h-auto font-medium hover:bg-white hover:text-green-700 transition">
+        <button onClick={handleSubmit} className="border border-blue-950 text-blue-950 lg:text-white px-5 py-2 rounded-2xl text-xl w-[80vw] lg:w-auto h-[4em] lg:h-auto font-medium hover:bg-white hover:text-green-700 transition">
           Partner with Us
         </button>
       </div>

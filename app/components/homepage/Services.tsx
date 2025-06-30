@@ -1,4 +1,7 @@
 import Image from "next/image";
+import img1 from "/assets/Frame76.png"
+import img2 from "/assets/Frame77.png"
+import img3 from "/assets/Frame78.png"
 
 const OurServices = () => {
   return (
@@ -21,7 +24,7 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src="/assets/Frame76.png"
+              src={img1}
               alt="Sales"
               width={500}
               height={300}
@@ -40,7 +43,7 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src="/assets/Frame77.png"
+              src={img2}
               alt="Development"
               width={500}
               height={300}
@@ -59,7 +62,7 @@ const OurServices = () => {
         <div className="bg-white rounded shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
           <div className="aspect-w-16 aspect-h-9">
             <Image
-              src="/assets/Frame78.png"
+              src={img3}
               alt="Consultancy"
               width={500}
               height={300}

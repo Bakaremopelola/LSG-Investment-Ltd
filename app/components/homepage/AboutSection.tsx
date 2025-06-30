@@ -3,6 +3,7 @@ import { useRouter }  from 'next/navigation';
 import { BsCash } from "react-icons/bs";
 import { FcServices } from "react-icons/fc";
 import Image from "next/image";
+import img from "../../../assets/Frame8.png"
 
 const AboutSection = () => {
   const navigate = useRouter();
@@ -30,7 +31,7 @@ const AboutSection = () => {
       <div className="flex flex-col md:flex-row px-16 md:gap-0 items-center gap-4 m-0 justify-center">
         <div className="lg:h-[550px] lg:w-[20vw] rounded-lg overflow-hidden">
           <Image
-            src="../../../assets/Frame8.png"
+            src={img}
             alt="House"
             width={500}
             height={550}
